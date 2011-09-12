@@ -11,11 +11,17 @@ String sUrl = "t6mq_WLV5c5uj6mUNSryBIA";
 String googleUser = GUSER;
 String googlePass = GPASS;
 
+// font object
+PFont label;
+
 void setup() {
    // this code happens once, right when our sketch is launched
-   size(800, 900);
+   size(800, 800);
    background(0);
    smooth();
+
+   // initialize font
+   label = createFont("Helvetica", 24);
 
    // get the list of numbers from google
    // int[] numbers = getNumbers();
@@ -108,7 +114,10 @@ void colorGrid(int[] nums, float x, float y, float s) {
    for(int i = 0; i < counts.length; i++) {
       colorMode(HSB);
       fill(counts[i] * 30, 255, 255, counts[i] * 30);
-      rect((i % 10) * s, floor(i / 10) * s, s, s);
+      textAlign(CENTER);
+      textFont(label);
+      textSize(s / 2);
+      text(i, (i % 10) * s, floor(i / 10) * s);
    }
 
    // restore the original corrdinates
