@@ -32,16 +32,16 @@ void setup() {
 
    // drawn both the user random numbers and "real" random numbers below the
    // line of original numbers
-   fill(255, 40);
-   noStroke();
-   // original numbers
-   for(int i = 0; i < numbers.length; i++) {
-      ellipse(numbers[i] * 8, height / 2, 8, 8);
-   }
-   // a line of random numbers
-   for(int i = 0; i < numbers.length; i++) {
-      ellipse(ceil(random(0, 99)) * 8, height / 2 + 20, 8, 8);
-   }
+   //fill(255, 40);
+   //noStroke();
+   //// original numbers
+   //for(int i = 0; i < numbers.length; i++) {
+   //   ellipse(numbers[i] * 8, height / 2, 8, 8);
+   //}
+   //// a line of random numbers
+   //for(int i = 0; i < numbers.length; i++) {
+   //   ellipse(ceil(random(0, 99)) * 8, height / 2 + 20, 8, 8);
+   //}
 }
 
 void draw() {
