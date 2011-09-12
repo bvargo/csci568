@@ -44,12 +44,15 @@ void setup() {
    //}
 
    // the user random numbers
-   barGraph(numbers, 100);
+   //barGraph(numbers, 100);
 
    // 6 other random number sets
-   for(int i = 0; i < 6; i++) {
-      barGraph(getRandomNumbers(225), 100 + ((i + 1) * 130));
-   }
+   //for(int i = 0; i < 6; i++) {
+   //   barGraph(getRandomNumbers(225), 100 + ((i + 1) * 130));
+   //}
+
+   // draw a grid of the numbers
+   colorGrid(numbers, 50, 50, 70);
 }
 
 void draw() {
@@ -77,4 +80,37 @@ void barGraph(int[] nums, float y) {
       fill(counts[i] * 30, 255, 255);
       rect(i * 8, y, 8, -counts[i] * 10);
    }
+}
+
+// make a grid for the numbers
+// nums is for the numbers
+// x and y are for the x and y position
+// s is the size for an individual block
+void colorGrid(int[] nums, float x, float y, float s) {
+   // make a frequence list ofr each number
+   int[] counts = new int[100];
+
+   // fill initial frequency with zeros
+   for(int i = 0; i < 100; i++) {
+      counts[i] = 0;
+   }
+
+   // tally counts
+   for(int i = 0; i < nums.length; i++) {
+      counts[nums[i]]++;
+   }
+
+   // move the drawing coordinates to the x,y position specified above
+   pushMatrix();
+   translate(x, y);
+
+   // draw the grid
+   for(int i = 0; i < counts.length; i++) {
+      colorMode(HSB);
+      fill(counts[i] * 30, 255, 255, counts[i] * 30);
+      rect((i % 10) * s, floor(i / 10) * s, s, s);
+   }
+
+   // restore the original corrdinates
+   popMatrix();
 }
