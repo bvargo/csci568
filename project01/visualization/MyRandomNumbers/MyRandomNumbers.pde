@@ -13,7 +13,7 @@ String googlePass = GPASS;
 
 void setup() {
    // this code happens once, right when our sketch is launched
-   size(800, 500);
+   size(800, 900);
    background(0);
    smooth();
 
@@ -43,7 +43,13 @@ void setup() {
    //   ellipse(ceil(random(0, 99)) * 8, height / 2 + 20, 8, 8);
    //}
 
-   barGraph(numbers, 400);
+   // the user random numbers
+   barGraph(numbers, 100);
+
+   // 6 other random number sets
+   for(int i = 0; i < 6; i++) {
+      barGraph(getRandomNumbers(225), 100 + ((i + 1) * 130));
+   }
 }
 
 void draw() {
