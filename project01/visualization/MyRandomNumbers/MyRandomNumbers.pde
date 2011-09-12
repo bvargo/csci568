@@ -42,9 +42,31 @@ void setup() {
    //for(int i = 0; i < numbers.length; i++) {
    //   ellipse(ceil(random(0, 99)) * 8, height / 2 + 20, 8, 8);
    //}
+
+   barGraph(numbers, 400);
 }
 
 void draw() {
    // this code happens once every frame
 }
 
+// make a bar graph of the given numbers at the given y value
+void barGraph(int[] nums, float y) {
+   // make a frequency list for each number
+   int[] counts = new int[100];
+
+   // fill initial frequency with zeros
+   for(int i = 0; i < 100; i++) {
+      counts[i] = 0;
+   }
+
+   // tally counts
+   for(int i = 0; i < nums.length; i++) {
+      counts[nums[i]]++;
+   }
+
+   // draw the graph
+   for(int i = 0; i < counts.length; i++) {
+      rect(i * 8, y, 8, -counts[i] * 10);
+   }
+}
