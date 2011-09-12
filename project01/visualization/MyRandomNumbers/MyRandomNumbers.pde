@@ -13,7 +13,7 @@ String googlePass = GPASS;
 
 void setup() {
    // this code happens once, right when our sketch is launched
-   size(500, 500);
+   size(800, 500);
    background(0);
    smooth();
 
