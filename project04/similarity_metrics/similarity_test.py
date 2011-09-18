@@ -13,8 +13,13 @@ def test_simple_matching_coefficient():
    b = (0, 1, 0, 1)
    assert simple_matching_coefficient(a, b) == 1.0 / 2.0
 
+def test_jacard():
+   a = (0, 0, 1, 1)
+   b = (0, 1, 0, 1)
+   assert jacard_similarity(a, b) == 1.0 / 3.0
+
 if __name__ == "__main__":
-   for test in [test_euclidean_distance, test_simple_matching_coefficient]:
+   for test in [test_euclidean_distance, test_simple_matching_coefficient, test_jacard]:
       print "Running", test
       test()
       print "PASSED"

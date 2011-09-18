@@ -24,3 +24,13 @@ def simple_matching_coefficient(a, b):
    match = sum([1 for i, j in zipped if i == j])
    total = len(zipped)
    return float(match) / total
+
+# returns a similarity - 0.0 = not similar, 1.0 = equal
+# attributes are converted to booleans
+def jacard_similarity(a, b):
+   a = list(a)
+   b = list(b)
+   zipped = zip(a, b)
+   match = sum([1 for i, j in zipped if i == j and bool(i) == True])
+   total = sum([1 for i, j in zipped if i or j])
+   return float(match) / total
