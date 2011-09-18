@@ -12,5 +12,15 @@ def minkowski_distance(a, b, r):
    s = sum([pow(abs(i - j), r) for i, j in zip(a, b)])
    return pow(s, 1.0/r)
 
+# returns a similarity - 0.0 = not similar, 1.0 = equal
 def euclidean_similarity(a, b):
    return 1.0 / (1.0 + minkowski_distance(a, b, 2))
+
+# returns a similarity - 0.0 = not similar, 1.0 = equal
+def simple_matching_coefficient(a, b):
+   a = list(a)
+   b = list(b)
+   zipped = zip(a, b)
+   match = sum([1 for i, j in zipped if i == j])
+   total = len(zipped)
+   return float(match) / total
