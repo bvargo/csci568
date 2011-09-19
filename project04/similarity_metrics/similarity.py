@@ -46,3 +46,14 @@ def tanimoto_simmilarity(a, b):
    magb_squared = sum([pow(i, 2) for i in b])
 
    return float(dotproduct) / (maga_squared + magb_squared - dotproduct)
+
+# returns a similarity - 0.0 = not similar, 1.0 = equal
+def cosine_similarity(a, b):
+   a = list(a)
+   b = list(b)
+   zipped = zip(a, b)
+   dotproduct = sum([i * j for i, j in zipped])
+   maga = minkowski_distance([0] * len(a), a, 2)
+   magb = minkowski_distance([0] * len(b), b, 2)
+
+   return float(dotproduct) / (maga * magb)
