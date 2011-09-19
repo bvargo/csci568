@@ -71,7 +71,6 @@ def pearson_correlation(a, b):
    return covariance(a, b) / \
           (sample_standard_deviation(a) * sample_standard_deviation(b))
 
-
 #
 # Test functions
 #

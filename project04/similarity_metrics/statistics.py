@@ -19,7 +19,6 @@ def sample_standard_deviation(a):
 def average(a):
    return float(sum(a)) / len(a)
 
-
 #
 # Test functions
 #
