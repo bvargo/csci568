@@ -18,8 +18,13 @@ def test_jacard():
    b = (0, 1, 0, 1)
    assert jacard_similarity(a, b) == 1.0 / 3.0
 
+def test_tanimoto():
+   a = (0, 0, 1, 1)
+   b = (0, 1, 0, 1)
+   assert tanimoto_simmilarity(a, b) == 1.0 / 3.0
+
 if __name__ == "__main__":
-   for test in [test_euclidean_distance, test_simple_matching_coefficient, test_jacard]:
+   for test in [test_euclidean_distance, test_simple_matching_coefficient, test_jacard, test_tanimoto]:
       print "Running", test
       test()
       print "PASSED"

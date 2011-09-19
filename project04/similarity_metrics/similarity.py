@@ -34,3 +34,15 @@ def jacard_similarity(a, b):
    match = sum([1 for i, j in zipped if i == j and bool(i) == True])
    total = sum([1 for i, j in zipped if i or j])
    return float(match) / total
+
+# returns a similarity - 0.0 = not similar, 1.0 = equal
+def tanimoto_simmilarity(a, b):
+   a = list(a)
+   b = list(b)
+
+   dotproduct = sum([i * j for i, j in zip(a, b)])
+
+   maga_squared = sum([pow(i, 2) for i in a])
+   magb_squared = sum([pow(i, 2) for i in b])
+
+   return float(dotproduct) / (maga_squared + magb_squared - dotproduct)
