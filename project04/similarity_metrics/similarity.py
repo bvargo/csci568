@@ -5,6 +5,10 @@
 # similarity metrics; some functions take the values into account, while
 # others do not
 
+import unittest
+
+from statistics import *
+
 # the minkowski distance, where r is the exponent to use
 def minkowski_distance(a, b, r):
    a = list(a)
@@ -57,3 +61,55 @@ def cosine_similarity(a, b):
    magb = minkowski_distance([0] * len(b), b, 2)
 
    return float(dotproduct) / (maga * magb)
+
+# returns a correlation - -1.0 = negatively correlated, 1.0 = positively
+# correlated, 0.0 = not correlated
+def pearson_correlation(a, b):
+   a = list(a)
+   b = list(b)
+
+   return covariance(a, b) / \
+          (sample_standard_deviation(a) * sample_standard_deviation(b))
+
+
+#
+# Test functions
+#
+class TestSimilarityFunctions(unittest.TestCase):
+   def test_euclidean_distance(self):
+      a = (0, 0)
+      b = (3, 4)
+      assert minkowski_distance(a, b, 2) == 5
+      assert euclidean_similarity(a, b) == 1.0 / 6
+
+   def test_simple_matching_coefficient(self):
+      a = (0, 0, 1, 1)
+      b = (0, 1, 0, 1)
+      assert simple_matching_coefficient(a, b) == 1.0 / 2.0
+
+   def test_jacard(self):
+      a = (0, 0, 1, 1)
+      b = (0, 1, 0, 1)
+      assert jacard_similarity(a, b) == 1.0 / 3.0
+
+   def test_tanimoto(self):
+      a = (0, 0, 1, 1)
+      b = (0, 1, 0, 1)
+      assert tanimoto_simmilarity(a, b) == 1.0 / 3.0
+
+   def test_cosine(self):
+      a = (3, 2, 0, 5, 0, 0, 0, 2, 0, 0)
+      b = (1, 0, 0, 0, 0, 0, 0, 1, 0, 2)
+      assert abs(cosine_similarity(a, b) - 0.31497) < 0.001
+
+   def test_pearson(self):
+      a = (-3,  6, 0,  3, -6)
+      b = ( 1, -2, 0, -1,  2)
+      assert abs(pearson_correlation(a, b) - -1.0) < 0.001
+
+      a = (3, 6, 0, 3, 6)
+      b = (1, 2, 0, 1, 2)
+      assert abs(pearson_correlation(a, b) - 1.0) < 0.001
+
+if __name__ == "__main__":
+   unittest.main()
