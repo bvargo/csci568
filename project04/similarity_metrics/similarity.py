@@ -13,7 +13,9 @@ from statistics import *
 def minkowski_distance(a, b, r):
    a = list(a)
    b = list(b)
+
    s = sum([pow(abs(i - j), r) for i, j in zip(a, b)])
+
    return pow(s, 1.0/r)
 
 # returns a similarity - 0.0 = not similar, 1.0 = equal
@@ -25,8 +27,10 @@ def simple_matching_similarity(a, b):
    a = list(a)
    b = list(b)
    zipped = zip(a, b)
+
    match = sum([1 for i, j in zipped if i == j])
    total = len(zipped)
+
    return float(match) / total
 
 # returns a similarity - 0.0 = not similar, 1.0 = equal
@@ -35,8 +39,10 @@ def jacard_similarity(a, b):
    a = list(a)
    b = list(b)
    zipped = zip(a, b)
+
    match = sum([1 for i, j in zipped if i == j and bool(i) == True])
    total = sum([1 for i, j in zipped if i or j])
+
    return float(match) / total
 
 # returns a similarity - 0.0 = not similar, 1.0 = equal
@@ -56,6 +62,7 @@ def cosine_similarity(a, b):
    a = list(a)
    b = list(b)
    zipped = zip(a, b)
+
    dotproduct = sum([i * j for i, j in zipped])
    maga = minkowski_distance([0] * len(a), a, 2)
    magb = minkowski_distance([0] * len(b), b, 2)
