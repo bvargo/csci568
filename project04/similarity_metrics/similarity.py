@@ -21,7 +21,7 @@ def euclidean_similarity(a, b):
    return 1.0 / (1.0 + minkowski_distance(a, b, 2))
 
 # returns a similarity - 0.0 = not similar, 1.0 = equal
-def simple_matching_coefficient(a, b):
+def simple_matching_similarity(a, b):
    a = list(a)
    b = list(b)
    zipped = zip(a, b)
@@ -81,10 +81,10 @@ class TestSimilarityFunctions(unittest.TestCase):
       assert minkowski_distance(a, b, 2) == 5
       assert euclidean_similarity(a, b) == 1.0 / 6
 
-   def test_simple_matching_coefficient(self):
+   def test_simple_matching_similarity(self):
       a = (0, 0, 1, 1)
       b = (0, 1, 0, 1)
-      assert simple_matching_coefficient(a, b) == 1.0 / 2.0
+      assert simple_matching_similarity(a, b) == 1.0 / 2.0
 
    def test_jacard(self):
       a = (0, 0, 1, 1)
