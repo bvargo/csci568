@@ -37,5 +37,8 @@ def main():
    for i in range(0, 50):
       kmeans.next()
 
+   # create a plot
+   create_plot(kmeans)
+
 if __name__ == "__main__":
    main()
