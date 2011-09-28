@@ -8,7 +8,7 @@ import matplotlib.pyplot as pyplot
 # the size of the items to plot
 size = 40
 
-def create_plot(kmeans):
+def create_plot(kmeans, x_attribute_index = 0, y_attribute_index = 1):
    # symbols, colors, and names
    symbols = ["s", "o", "^", ">", "v", "<", "d", "p", "h", "8", "+", "x"]
    colors = ["b", "y", "m", "r", "c", "g", "k", "w"]
@@ -41,14 +41,18 @@ def create_plot(kmeans):
          values = plots[cluster_number][name]
          values = [list(o) for o in values]
 
-         x_values = [o[0] for o in values]
-         y_values = [o[1] for o in values]
+         x_values = [o[x_attribute_index] for o in values]
+         y_values = [o[y_attribute_index] for o in values]
 
          axis.scatter(x_values, y_values, s=size, c=colors[cluster_number], marker=name_symbols[name])
 
    # plot each centroid
    for centroid in kmeans.centroids:
-      axis.scatter([centroid[0]], [centroid[1]], s=size, c='k', marker="+")
+      axis.scatter([centroid[x_attribute_index]],
+                   [centroid[y_attribute_index]],
+                   s=size,
+                   c='k',
+                   marker="+")
 
    pyplot.show()
 
