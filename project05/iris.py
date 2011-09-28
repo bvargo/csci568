@@ -37,6 +37,22 @@ class Iris(object):
    def __len__(self):
       return len(self.cluster_attributes)
 
+   def __eq__(self, other):
+      return self.sepal_length == other.sepal_length and \
+             self.sepal_width == other.sepal_width   and \
+             self.petal_length == other.petal_length and \
+             self.petal_width == other.petal_width   and \
+             self.name == other.name
+
+   def __hash__(self):
+      value = 0
+      value = 31 * value + self.sepal_length
+      value = 31 * value + self.sepal_width
+      value = 31 * value + self.petal_length
+      value = 31 * value + self.petal_width
+      value = 31 * value + hash(self.name)
+      return value
+
    def next(self):
       self.current_attribute += 1
       if self.current_attribute > len(self.cluster_attributes):

@@ -67,9 +67,21 @@ class KMeans(object):
          centroid.append(random.uniform(r[0], r[1]))
       return tuple(centroid)
 
+   # runs kmeans
+   def run(self):
+      num_iterations = 0
+      while True:
+         try:
+            num_iterations += 1
+            self.next()
+         except StopIteration:
+            # nothing more
+            return num_iterations
+
    # next iteration of k-means
    def next(self):
-      # clear old clusters
+      # save and then clear old clusters
+      old_clusters = self.clusters
       self.clusters = [[] for i in range(0, len(self.centroids))]
 
       # associate each object with a centroid
@@ -96,6 +108,23 @@ class KMeans(object):
       # move each centroid to the middle of each cluster
       for i, c in enumerate(self.centroids):
          self.centroids[i] = self.calculate_centroid(self.clusters[i])
+
+      # check to see if the clusters changed; if no cluster changed, then the
+      # algorithm is done
+      if len(old_clusters) == len(self.clusters):
+         for i in range(0, len(self.clusters)):
+            if len(old_clusters[i]) != len(self.clusters[i]):
+               break
+         else:
+            # all of the clusters are of the same size
+            # look for a difference in the hash values of the tuples
+            for i in range(0, len(self.clusters)):
+               if hash(tuple(old_clusters[i])) != hash(tuple(self.clusters[i])):
+                  # difference - the clusters changed
+                  break
+            else:
+               # no changes detected - stop the iteration
+               raise StopIteration
 
    # returns an array of SSE values for each cluster
    def sses(self):

@@ -33,9 +33,9 @@ def main():
    kmeans = KMeans(3, irii, euclidean_similarity)
 
    # run the algorithm
-   # TODO: stopping condition
-   for i in range(0, 50):
-      kmeans.next()
+   num_iterations = kmeans.run()
+   print "K-Means ran in %d iterations" % (num_iterations)
+   print
 
    print "SSE Values for each cluster:"
    for cluster_num, sse in enumerate(kmeans.sses()):
