@@ -26,6 +26,13 @@ def import_csv(filename="iris.csv"):
 
 # the main function
 def main():
+   print "K-Means algorithm illustrated through the iris dataset"
+   print "The algorithm uses random initialization and iterates until no iris"
+   print "switches clusters."
+   print "If matplotlib is installed, the resulting clusters are illustrated"
+   print "in a graphical manner."
+   print
+
    # import the data
    irii = import_csv()
 
