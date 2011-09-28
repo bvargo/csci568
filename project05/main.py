@@ -37,8 +37,23 @@ def main():
    for i in range(0, 50):
       kmeans.next()
 
+   print "SSE Values for each cluster:"
+   for cluster_num, sse in enumerate(kmeans.sses()):
+      num_members = len(kmeans.clusters[cluster_num])
+      print "Cluster %d (%d members): %f" % (cluster_num, num_members, sse)
+
+   print
+
    # create a plot
-   create_plot(kmeans)
+   try:
+      print "Plotting sepal length vs sepal width."
+      print "Colors indicate the cluster, as identified by k-means across all"
+      print "attributes. The symbol indicates the 'correct' group, as"
+      print "determined by the name of the IRIS. The black + symbols indicate"
+      print "the centroids."
+      create_plot(kmeans)
+   except:
+      print "There was a plotting error. Do you have matplotlib installed?"
 
 if __name__ == "__main__":
    main()

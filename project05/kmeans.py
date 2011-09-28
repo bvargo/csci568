@@ -97,6 +97,19 @@ class KMeans(object):
       for i, c in enumerate(self.centroids):
          self.centroids[i] = self.calculate_centroid(self.clusters[i])
 
+   # returns an array of SSE values for each cluster
+   def sses(self):
+      sses = []
+      for i, cluster in enumerate(self.clusters):
+         sse = 0
+         centroid = self.centroids[i]
+         for point in cluster:
+            for j, attribute in enumerate(point):
+               # (centroid attribute value - this point's attribute value)^2
+               sse += pow(centroid[j] - attribute, 2)
+         sses.append(sse)
+      return sses
+
    # calculates the centroid of the cluster
    # if the cluster is empty, a new random centroid is made
    def calculate_centroid(self, cluster):
