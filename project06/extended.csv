@@ -1,0 +1,299 @@
+name,winner,contains_dot,contains_dash,num_parts_odd_even,ratio_of_first_to_last,ratio_of_vowles,ratio_of_consonants,starts_with_vowel,ends_with_vowel,num_uniq_letters,number_of_vowel_digraphs,number_of_consant_digraphs,weighted_vowel_count,consonant_digraph_beginning,consonant_digraph_end
+Ed Pednault,False,False,False,True,0.25,0.0,0.4,False,False,10,True,True,19,True,False
+Neela Khan,True,False,False,True,1.25,3.0,0.666666666667,False,False,8,True,True,15,False,True
+Bir Bhanu,True,False,False,True,0.6,0.5,0.666666666667,False,True,8,False,True,15,False,True
+Arlindo Oliveira,False,False,False,True,0.875,0.5,1.25,False,True,12,True,True,59,True,True
+Irina Tchoumatchenko,False,False,False,True,0.357142857143,0.4,0.333333333333,False,True,15,True,True,72,True,True
+Robert C. Holte,True,True,False,False,1.2,1.0,1.33333333333,False,True,11,False,True,29,False,False
+Michele Sebag,True,False,False,True,1.4,1.5,1.33333333333,False,False,11,False,True,31,False,False
+Jorg-Uwe Kietz,True,False,True,True,1.6,1.0,2.0,False,False,13,True,True,29,False,False
+Yoshifumi Sakai,True,False,False,True,1.8,1.33333333333,2.5,False,True,12,True,True,57,False,False
+Thomas E. Kammeyer,False,True,False,False,0.75,0.666666666667,0.8,False,False,13,False,True,47,True,False
+Yoav Freund,True,False,False,True,0.666666666667,1.0,0.5,False,False,11,True,True,18,False,True
+R. Andrew McCallum,False,True,False,False,0.25,0.0,0.333333333333,False,False,16,False,True,36,True,True
+Jonathan Gratch,True,False,False,True,1.33333333333,3.0,1.0,False,False,10,False,True,21,False,True
+Margo Guertin,True,False,False,True,0.714285714286,0.666666666667,0.75,False,False,12,True,True,31,False,False
+Huw Roberts,True,False,False,True,0.428571428571,0.5,0.4,False,False,11,False,True,13,False,False
+Sally Goldman,True,False,False,True,0.714285714286,0.5,0.8,False,False,10,False,True,19,False,False
+Bhaskar Dasgupta,False,False,False,True,0.875,0.666666666667,1.0,False,True,12,False,True,43,True,False
+Fernando Pereira,True,False,False,True,1.14285714286,0.75,1.66666666667,False,True,10,True,True,62,False,False
+Nina Mishra,True,False,False,True,0.666666666667,1.0,0.5,False,True,9,False,True,20,False,False
+Wray Buntine,False,False,False,True,0.571428571429,0.333333333333,0.75,False,True,11,False,True,28,True,False
+William A. Greene,True,True,False,False,1.16666666667,1.0,1.33333333333,False,True,12,True,True,53,False,True
+Yolanda Gil,True,False,False,True,2.33333333333,3.0,2.0,False,False,9,False,True,19,False,False
+Chris Drummond,False,False,False,True,0.625,0.5,0.666666666667,False,False,12,False,True,22,True,True
+Claude Sammut,False,False,False,True,1.0,1.5,0.75,False,False,10,True,True,29,True,False
+Charles X. Ling,False,True,False,False,1.75,2.0,1.66666666667,False,False,14,False,True,19,True,False
+Sanjay Jain,True,False,False,True,1.5,1.0,2.0,False,False,8,True,True,22,False,False
+Stefan Kramer,False,False,False,True,1.0,1.0,1.0,False,False,10,False,True,26,True,True
+Cristina Baroglio,False,False,False,True,1.0,0.75,1.25,False,True,12,True,True,67,True,False
+Dwight Schrute,True,False,False,True,0.857142857143,0.5,1.0,False,True,12,False,True,26,True,True
+Leslie Pack Kaelbling,True,False,False,False,0.666666666667,1.0,0.5,False,False,14,True,True,63,False,False
+Philip Chan,False,False,False,True,1.5,2.0,1.33333333333,False,False,9,False,True,15,True,True
+Yishay Mansour,True,False,False,True,0.857142857143,0.666666666667,1.0,False,False,12,True,True,36,False,False
+Michael I. Jordan,True,True,False,False,1.16666666667,1.5,1.0,False,False,15,True,True,37,False,False
+Patrick M. Murphy,True,True,False,False,1.16666666667,2.0,1.0,False,False,14,False,True,17,False,False
+Karsten Verbeurgt,True,False,False,True,0.777777777778,0.666666666667,0.833333333333,False,False,12,True,True,40,False,False
+Attilio Giordana,False,False,False,True,0.875,0.75,1.0,False,True,11,True,True,61,True,False
+Gerald F. DeJong,True,True,False,False,1.0,1.0,1.0,False,False,14,False,True,28,False,False
+Thomas Zeugmann,False,False,False,True,0.75,0.666666666667,0.8,False,False,12,True,True,35,True,False
+Mandayam T. Suraj,True,True,False,False,1.6,1.5,1.66666666667,False,False,13,False,True,39,False,False
+Michael Littman,True,False,False,True,1.0,1.5,0.8,False,False,12,True,True,32,False,False
+Shaul Markovitch,False,False,False,True,0.5,0.666666666667,0.428571428571,False,False,14,True,True,34,True,False
+Eric Allender,False,False,False,True,0.5,0.5,0.5,False,False,10,False,True,21,True,True
+Cullen Schaffer,True,False,False,True,0.75,1.0,0.666666666667,False,False,12,False,True,28,False,True
+Roberto Piola,True,False,False,True,1.4,1.0,2.0,False,True,11,True,True,41,False,False
+Nader Bshouty,True,False,False,True,0.714285714286,1.0,0.6,False,False,13,True,True,23,False,True
+Bruce A. MacDonald,False,True,False,False,0.555555555556,0.666666666667,0.5,False,False,15,False,True,44,True,False
+Kamal M. Ali,True,True,False,False,1.66666666667,2.0,1.5,False,True,9,False,True,15,False,True
+Foster J. Provost,True,True,False,False,0.857142857143,1.0,0.8,False,False,11,False,True,31,False,True
+Wolfgang Janko,True,False,False,True,1.6,1.0,2.0,False,True,10,False,True,29,False,False
+Seth Flanders,True,False,False,True,0.5,0.5,0.5,False,False,12,False,True,18,False,True
+Peter Bartlett,True,False,False,True,0.625,1.0,0.5,False,False,8,False,True,22,False,False
+Craig Knoblock,False,False,False,True,0.625,1.0,0.5,False,False,13,True,True,24,True,True
+Earl S. Harris Jr.,True,True,False,True,1.33333333333,0,1.0,False,False,11,False,True,22,False,True
+Prasad Tadepalli,False,False,False,True,0.666666666667,0.5,0.8,False,True,11,False,True,51,True,False
+Stan Matwin,False,False,False,True,0.666666666667,0.5,0.75,False,False,8,False,True,17,True,False
+Pascal Koiran,True,False,False,True,1.0,0.666666666667,1.33333333333,False,False,11,True,True,33,False,False
+Sandra Panizza,True,False,False,True,0.857142857143,0.666666666667,1.0,False,True,9,False,True,37,False,False
+George Berg,True,False,False,True,1.5,3.0,1.0,False,False,7,True,True,16,False,False
+Stephen Kwek,False,False,False,True,1.75,2.0,1.66666666667,False,False,10,False,True,17,True,True
+J. R. Quinlan,False,True,False,False,0.285714285714,0.0,0.5,False,False,10,True,True,26,True,False
+Sebastian Seung,True,False,False,True,1.8,2.0,1.66666666667,False,False,11,True,True,40,False,False
+Susan L. Epstein,True,True,False,False,0.714285714286,1.0,0.6,False,False,13,True,True,31,False,True
+Priscilla Rasmussen,False,False,False,True,1.0,1.0,1.0,False,False,13,False,True,57,True,False
+Steven Minton,False,False,False,True,1.0,1.0,1.0,False,False,9,False,True,25,True,False
+Lance Riley,True,False,False,True,1.0,1.0,1.0,False,False,10,False,True,21,False,False
+Jose L. Balcazar,True,True,False,False,0.5,0.666666666667,0.4,False,False,13,False,True,39,False,False
+William Sakas,True,False,False,True,1.4,1.5,1.33333333333,False,False,9,True,True,30,False,False
+Claudio Facchinetti,False,False,False,True,0.636363636364,1.0,0.428571428571,False,True,14,True,True,71,True,False
+Vijay Raghavan,True,False,False,True,0.625,0.666666666667,0.6,False,False,11,False,True,33,False,False
+Bob Evans,True,False,False,True,0.6,1.0,0.5,False,False,9,False,True,7,False,True
+Neil Berkman,True,False,False,True,0.571428571429,1.0,0.4,False,False,11,True,True,19,False,False
+Masayuki Inaba,True,False,False,True,1.6,2.0,1.33333333333,False,True,11,False,True,40,False,True
+Shai Ben-David,False,False,True,True,0.444444444444,0.666666666667,0.333333333333,False,False,12,True,True,33,True,False
+Dan Roth,True,False,False,True,0.75,1.0,0.666666666667,False,False,8,False,True,6,False,False
+Lisa Hellerstein,True,False,False,True,0.363636363636,0.5,0.285714285714,False,False,11,True,True,46,False,False
+Geoffrey Gordon,True,False,False,True,1.33333333333,1.5,1.25,False,False,9,True,True,32,False,False
+Paul Vitanyi,True,False,False,True,0.571428571429,0.666666666667,0.5,False,True,10,True,True,28,False,False
+Anselm Blumer,False,False,False,True,1.0,0.5,1.25,False,False,10,False,True,23,True,True
+Jeff Jackson,True,False,False,True,0.571428571429,0.5,0.6,False,False,10,False,True,17,False,False
+Steven W. Norton,False,True,False,False,1.0,1.0,1.0,False,False,11,False,True,31,True,False
+R. Bharat Rao,False,True,False,False,0.666666666667,0.0,2.0,False,True,9,True,True,35,True,False
+Matthias Heger,True,False,False,True,1.6,1.5,1.66666666667,False,False,11,True,True,34,False,False
+Nicolo Cesa-Bianchi,True,False,True,True,0.5,0.6,0.428571428571,False,True,14,True,True,72,False,False
+David Montgomery,True,False,False,True,0.5,0.666666666667,0.428571428571,False,False,15,False,True,35,False,False
+Patricia J. Riddle,True,True,False,False,1.33333333333,2.0,1.0,False,True,13,True,True,48,False,False
+J. Jeffrey Mahoney,False,True,False,False,0.285714285714,0.0,0.5,False,False,12,False,True,54,True,False
+Kazushi Ikeda,True,False,False,True,1.4,1.5,1.33333333333,False,True,12,False,True,32,False,True
+Thomas G. Dietterich,False,True,False,False,0.6,0.5,0.666666666667,False,False,15,True,True,61,True,False
+Pang-Chieh Chen,True,False,True,True,2.5,3.0,2.33333333333,False,False,10,True,True,29,False,True
+Paul Utgoff,True,False,False,True,0.666666666667,2.0,0.4,False,False,10,True,True,11,False,True
+Joseph OSullivan,True,False,False,True,0.6,0.666666666667,0.571428571429,False,False,16,False,True,42,False,True
+Toshiyasu Matsushima,True,False,False,True,0.9,1.0,0.833333333333,False,True,12,False,True,80,False,False
+Timothy P. Barber,True,True,False,False,1.16666666667,1.0,1.25,False,False,15,False,True,31,False,False
+Phil Long,False,False,False,True,1.0,1.0,1.0,False,False,9,False,True,8,True,False
+Tal Grossman,True,False,False,True,0.375,0.5,0.333333333333,False,False,10,False,True,17,False,True
+Donna Slonim,True,False,False,True,0.833333333333,1.0,0.75,False,False,9,False,True,23,False,True
+Tatsuo Unemi,True,False,False,True,1.2,1.5,1.0,False,True,12,True,True,30,False,True
+Krishnan Pillaipakkamnatt,False,False,False,True,0.5,0.333333333333,0.6,False,False,14,True,True,102,True,False
+Lorenza Saitta,True,False,False,True,1.16666666667,1.0,1.33333333333,False,True,11,True,True,42,False,False
+Usama Fayyad,False,False,False,True,0.833333333333,1.0,0.75,False,False,8,False,True,23,True,False
+Jude Shavlik,True,False,False,True,0.571428571429,1.0,0.4,False,False,12,False,True,21,False,True
+David Helmbold,True,False,False,True,0.625,1.0,0.5,False,False,12,False,True,22,False,False
+Grigoris Karakoulas,False,False,False,True,0.8,0.6,1.0,False,False,12,True,True,80,True,False
+Tom Hancock,True,False,False,True,0.428571428571,0.5,0.4,False,False,9,False,True,14,False,False
+Drago Indjic,False,False,False,True,0.833333333333,2.0,0.6,False,False,12,False,True,16,True,True
+Gary Weiss,True,False,False,True,0.8,0.5,1.0,False,False,9,True,True,14,False,False
+Frank Stephan,False,False,False,True,0.714285714286,0.5,0.8,False,False,11,False,True,21,True,True
+Kenji Yamanishi,True,False,False,True,0.555555555556,0.5,0.6,False,True,11,False,True,46,False,False
+Wan P. Chiang,True,True,False,False,0.5,0.5,0.5,False,False,10,True,True,20,False,True
+Yoram Singer,True,False,False,True,0.833333333333,1.0,0.75,False,False,11,False,True,21,False,False
+Melinda T. Gervasio,True,True,False,False,0.875,0.75,1.0,False,True,15,True,True,72,False,False
+Kate Goelz,True,False,False,True,0.8,1.0,0.666666666667,False,False,9,True,True,17,False,False
+Roni Khardon,True,False,False,True,0.571428571429,1.0,0.4,False,False,10,False,True,21,False,True
+Nikolay Nikolaev,True,False,False,True,0.875,0.75,1.0,False,False,10,True,True,56,False,False
+George H. John,True,True,False,False,1.5,3.0,1.0,False,False,11,True,True,19,False,False
+Diana Gordon,True,False,False,True,0.833333333333,1.5,0.5,False,False,9,True,True,24,False,False
+Claire Cardie,False,False,False,True,1.0,1.0,1.0,False,True,8,True,True,41,True,False
+Moshe Koppel,True,False,False,True,0.833333333333,1.0,0.75,False,False,9,False,True,22,False,False
+Andy Bernard,True,False,False,True,0.571428571429,0.0,0.8,False,False,9,False,True,15,True,False
+Marcos Salganicoff,True,False,False,True,0.545454545455,0.5,0.571428571429,False,False,13,False,True,52,False,False
+David W. Opitz,True,True,False,False,1.0,2.0,0.75,False,False,12,False,True,15,False,True
+Mark Changizi,True,False,False,True,0.5,0.333333333333,0.6,False,True,11,False,True,30,False,True
+Lars Asker,True,False,False,True,0.8,1.0,0.75,False,False,8,False,True,9,False,True
+Dana Ron,True,False,False,True,1.33333333333,2.0,1.0,False,False,6,False,True,10,False,False
+Andrey Burago,False,False,False,True,1.0,0.333333333333,1.66666666667,False,True,12,False,True,34,True,False
+Eddy Mayoraz,False,False,False,True,0.571428571429,0.0,1.0,False,False,9,False,True,24,True,False
+Mark Schwabacher,True,False,False,True,0.363636363636,0.333333333333,0.375,False,False,11,False,True,35,False,True
+Carl H. Smith,True,True,False,False,0.8,1.0,0.75,False,False,12,False,True,11,False,True
+Wee Sun Lee,True,False,False,False,1.0,1.0,1.0,False,True,7,True,True,27,False,False
+Mario Marchand,True,False,False,True,0.625,1.5,0.333333333333,False,False,10,True,True,26,False,False
+David Pierce,True,False,False,True,0.833333333333,0.666666666667,1.0,False,True,10,True,True,30,False,False
+Dan Oblinger,True,False,False,True,0.375,0.5,0.333333333333,False,False,11,False,True,18,False,True
+Lyle H. Ungar,False,True,False,False,0.8,1.0,0.75,False,False,12,False,True,14,True,True
+Hiroshi Tanaka,True,False,False,True,1.16666666667,1.0,1.33333333333,False,True,11,False,True,43,False,False
+Johanne Morin,True,False,False,True,1.4,1.5,1.33333333333,False,False,10,False,True,30,False,False
+Thomas Wengerek,False,False,False,True,0.75,0.666666666667,0.8,False,False,13,False,True,38,True,False
+Mark W. Craven,True,True,False,False,0.666666666667,0.5,0.75,False,False,11,False,True,23,False,True
+Tom Fawcett,True,False,False,True,0.428571428571,0.5,0.4,False,False,10,False,True,14,False,False
+John R. Rose,True,True,False,False,1.0,0.5,1.5,False,True,9,False,True,21,False,False
+Richard A. Caruana,True,True,False,False,1.0,0.5,1.66666666667,False,True,13,True,True,63,False,False
+Steven Salzberg,False,False,False,True,0.75,1.0,0.666666666667,False,False,12,False,True,26,True,False
+Barak A. Pearlmutter,True,True,False,False,0.454545454545,0.5,0.428571428571,False,False,13,True,True,58,False,False
+Chris Darken,False,False,False,True,0.833333333333,0.5,1.0,False,False,11,False,True,20,True,False
+Judy A. Franklin,True,True,False,False,0.5,0.5,0.5,False,False,14,False,True,25,False,True
+Xuemei Wang,True,False,False,True,1.5,4.0,0.666666666667,False,False,10,True,True,20,False,False
+Nitin Indurkhya,True,False,False,True,0.555555555556,1.0,0.428571428571,False,True,13,False,True,27,False,True
+Oded Maron,False,False,False,True,0.8,0.5,1.0,False,False,9,False,True,16,True,False
+Takefumi Yamazaki,True,False,False,True,1.0,1.0,1.0,False,True,11,False,True,68,False,False
+Satinder Pal Singh,True,False,False,False,1.6,3.0,1.25,False,False,13,False,True,34,False,False
+Ron Kohavi,True,False,False,True,0.5,0.333333333333,0.666666666667,False,True,9,False,True,22,False,False
+Michael de la Maza,True,False,False,True,1.75,1.5,2.0,False,True,10,True,True,63,False,False
+Robert Sloan,True,False,False,True,1.2,1.0,1.33333333333,False,False,11,True,True,23,False,True
+Chun-Nan Hsu,False,False,True,True,2.66666666667,2.0,3.0,False,True,10,False,True,19,True,True
+Daniel Kortenkamp,True,False,False,True,0.6,1.0,0.428571428571,False,False,14,True,True,41,False,False
+Ricard Gavalda,True,False,False,True,0.857142857143,0.666666666667,1.0,False,True,10,False,True,35,False,False
+Joe Suzuki,True,False,False,True,0.5,0.666666666667,0.333333333333,False,True,9,True,True,24,False,False
+James S. Royer,True,True,False,False,1.0,1.0,1.0,False,False,12,False,True,26,False,False
+Jyrki Kivinen,False,False,False,True,0.714285714286,0.333333333333,1.0,False,False,10,False,True,31,True,False
+Tapio Elomaa,True,False,False,True,0.833333333333,1.0,0.666666666667,False,True,9,True,True,37,False,True
+Michael Redmond,True,False,False,True,1.0,1.5,0.8,False,False,13,True,True,31,False,False
+Rich Maclin,True,False,False,True,0.666666666667,0.5,0.75,False,False,9,False,True,16,False,False
+Jiarong Hong,True,False,False,True,1.75,3.0,1.33333333333,False,False,9,True,True,16,False,False
+Janusz Wnek,True,False,False,True,1.5,2.0,1.33333333333,False,False,10,False,True,13,False,True
+David B. Skalak,True,True,False,False,0.833333333333,1.0,0.75,False,False,11,False,True,28,False,True
+Daniel Hennessy,True,False,False,True,0.75,1.5,0.5,False,False,10,True,True,27,False,False
+David Cohn,True,False,False,True,1.25,2.0,1.0,False,False,10,False,True,11,False,False
+Merrick L. Furst,True,True,False,False,1.4,2.0,1.25,False,False,13,False,True,17,False,False
+Lindley Darden,True,False,False,True,1.16666666667,1.0,1.25,False,False,11,False,True,27,False,False
+Steve A. Chien,False,True,False,False,1.0,1.0,1.0,False,False,11,True,True,29,True,True
+Wai Lam,True,False,False,True,1.0,2.0,0.5,False,False,6,True,True,8,False,False
+Paul W. Goldberg,True,True,False,False,0.5,1.0,0.333333333333,False,False,14,True,True,25,False,False
+Stephen Muggleton,False,False,False,True,0.777777777778,0.666666666667,0.833333333333,False,False,12,False,True,44,True,False
+Jason Catlett,True,False,False,True,0.714285714286,1.0,0.6,False,False,10,False,True,21,False,False
+Justinian Rosca,True,False,False,True,1.8,2.0,1.66666666667,False,True,11,True,True,43,False,False
+Sreerama K. Murthy,False,True,False,False,1.33333333333,4.0,0.8,False,False,13,True,True,30,True,False
+Richard S. Sutton,True,True,False,False,1.16666666667,1.0,1.25,False,False,14,False,True,32,False,False
+Michael W. Barley,True,True,False,False,1.16666666667,1.5,1.0,False,False,13,True,True,37,False,False
+Leslie Grate,True,False,False,True,1.2,1.5,1.0,False,True,10,True,True,30,False,True
+Nathalie Japkowicz,True,False,False,True,0.888888888889,1.33333333333,0.666666666667,False,False,15,True,True,56,False,False
+Randolph Jones,True,False,False,True,1.6,1.0,2.0,False,False,12,False,True,27,False,False
+John Rachlin,True,False,False,True,0.571428571429,0.5,0.6,False,False,10,False,True,17,False,False
+Moshe Leshno,True,False,False,True,0.833333333333,1.0,0.75,False,True,8,False,True,23,False,False
+Emanuel Knill,False,False,False,True,1.4,3.0,1.0,False,False,10,True,True,21,True,True
+Sholom Weiss,False,False,False,True,1.2,1.0,1.33333333333,False,False,10,True,True,23,True,False
+Darko Zupanic,True,False,False,True,0.714285714286,0.666666666667,0.75,False,False,12,False,True,32,False,False
+Thomas G. Spalthoff,False,True,False,False,0.666666666667,1.0,0.571428571429,False,False,14,False,True,34,True,True
+Michael Kearns,True,False,False,True,1.16666666667,1.5,1.0,False,False,12,True,True,29,False,False
+Holly Yanco,True,False,False,True,1.0,0.5,1.33333333333,False,True,9,False,True,18,False,False
+Olivier De Vel,False,False,False,False,2.33333333333,3.0,2.0,False,False,9,True,True,32,True,False
+Tom Bylander,True,False,False,True,0.375,0.5,0.333333333333,False,False,12,False,True,18,False,True
+Johannes Furnkranz,True,False,False,True,0.888888888889,1.5,0.714285714286,False,False,13,False,True,35,False,False
+Pat Langley,True,False,False,True,0.428571428571,0.5,0.4,False,False,10,False,True,15,False,False
+Javed Aslam,True,False,False,True,1.0,2.0,0.75,False,False,10,False,True,13,False,True
+Jean Gabriel Ganascia,True,False,False,False,0.5,0.5,0.5,False,True,12,True,True,97,False,False
+Sean Slattery,True,False,False,True,0.5,1.0,0.333333333333,False,False,9,True,True,20,False,True
+Michael A. meystel,True,True,False,False,1.0,1.5,0.8,False,False,14,True,True,38,False,False
+Brian D. Davidson,False,True,False,False,0.625,0.666666666667,0.6,False,False,12,True,True,42,True,False
+David Gillman,True,False,False,True,0.714285714286,1.0,0.6,False,False,10,False,True,22,False,False
+Matevz Kovacic,True,False,False,True,0.857142857143,0.666666666667,1.0,False,False,11,False,True,34,False,False
+Bala Kalyanasundaram,True,False,False,True,0.266666666667,0.333333333333,0.222222222222,False,False,12,False,True,77,False,False
+Martin Kummer,True,False,False,True,1.0,1.0,1.0,False,False,11,False,True,24,False,False
+Manfred Warmuth,True,False,False,True,1.0,1.0,1.0,False,False,13,False,True,27,False,False
+David Mathias,True,False,False,True,0.714285714286,0.666666666667,0.75,False,False,10,True,True,32,False,False
+Brian Tester,False,False,False,True,0.833333333333,1.0,0.75,False,False,10,True,True,22,True,False
+Nicolas Fiechter,True,False,False,True,0.875,1.0,0.8,False,False,13,True,True,42,False,False
+Aurora Perez,True,False,False,True,1.2,1.5,1.0,False,False,9,False,True,27,False,False
+Michael Scott,False,False,False,True,1.4,3.0,1.0,False,False,11,True,True,20,False,True
+Naoki Abe,True,False,False,True,1.66666666667,3.0,1.0,False,True,9,True,True,15,False,True
+Kimmen Sjolander,True,False,False,True,0.666666666667,0.666666666667,0.666666666667,False,False,13,False,True,39,False,True
+Jeffery Clouse,True,False,False,True,1.16666666667,0.666666666667,1.66666666667,False,True,11,True,True,39,False,True
+Robert P. Daley,True,True,False,False,1.2,1.0,1.33333333333,False,False,13,False,True,28,False,False
+William Gasarch,True,False,False,True,1.0,1.5,0.8,False,False,11,True,True,30,False,False
+Reinhard Blasig,True,False,False,True,1.33333333333,1.5,1.25,False,False,13,True,True,32,False,True
+Malini Bhandaru,True,False,False,True,0.75,1.0,0.6,False,True,11,False,True,44,False,True
+Robert Schapire,True,False,False,True,0.75,0.666666666667,0.8,False,True,13,False,True,40,False,True
+Gary M. Selzer,True,True,False,False,0.666666666667,0.5,0.75,False,False,11,False,True,22,False,False
+Clare Bates Congdon,False,False,False,False,0.714285714286,1.0,0.6,False,False,13,False,True,52,True,False
+Martinch Krikis,True,False,False,True,1.33333333333,1.0,1.5,False,False,12,False,True,29,False,True
+John Case,True,False,False,True,1.0,0.5,1.5,False,True,9,False,True,15,False,False
+Lance Fortnow,True,False,False,True,0.714285714286,1.0,0.6,False,False,11,False,True,23,False,False
+Lorien Y. Pratt,True,True,False,False,1.2,3.0,0.75,False,False,12,True,True,20,False,True
+Klaus P. Jantke,False,True,False,False,0.833333333333,1.0,0.75,False,True,13,True,True,29,True,False
+Haralabos Athanassiou,True,False,False,True,0.818181818182,0.8,0.833333333333,False,True,14,True,True,101,False,True
+Bradley L. Whitehall,False,True,False,False,0.777777777778,0.666666666667,0.833333333333,False,False,14,False,True,52,True,True
+Sridhar Mahadevan,False,False,False,True,0.777777777778,0.5,1.0,False,False,11,False,True,55,True,False
+Craig Nevill-Manning,False,False,True,True,0.357142857143,0.5,0.3,False,False,13,True,True,52,True,False
+Paul Fischer,True,False,False,True,0.571428571429,1.0,0.4,False,False,12,True,True,19,False,False
+Hal Duncan,True,False,False,True,0.5,0.5,0.5,False,False,8,False,True,14,False,False
+Von-Wun Soo,True,False,True,True,2.33333333333,1.0,5.0,False,True,8,True,True,25,False,False
+Bill Byrne,True,False,False,True,0.8,1.0,0.75,False,True,8,False,True,10,False,True
+Myriam Abramson,False,False,False,True,0.75,1.0,0.666666666667,False,False,12,True,True,30,True,True
+Creed Bratton,True,False,False,True,0.714285714286,1.0,0.6,False,False,10,True,True,24,True,True
+Minoru Asada,True,False,False,True,1.2,1.5,1.0,False,True,11,False,True,29,False,True
+Tom M. Mitchell,True,True,False,False,0.375,0.5,0.333333333333,False,False,12,False,True,21,False,False
+Jean-Daniel Zucker,True,False,True,True,1.83333333333,2.5,1.5,False,False,14,True,True,55,False,False
+Sonya Snedecor,True,False,False,True,0.625,0.666666666667,0.6,False,False,10,False,True,35,False,True
+Glenn Silverstein,False,False,False,True,0.454545454545,0.25,0.571428571429,False,False,11,True,True,48,True,False
+Avrim Blum,False,False,False,True,1.25,1.0,1.33333333333,False,False,9,False,True,11,True,True
+Scott E. Decatur,False,True,False,False,0.714285714286,0.333333333333,1.0,False,False,12,False,True,38,True,False
+Dana Angluin,True,False,False,True,0.571428571429,1.0,0.4,False,False,9,True,True,23,False,True
+Wolfgang Maass,True,False,False,True,1.6,1.0,2.0,False,False,10,True,True,27,False,False
+Chidanand Apte,False,False,False,True,2.25,3.0,2.0,False,True,11,False,True,25,True,True
+Marko Grobelnik,True,False,False,True,0.555555555556,0.666666666667,0.5,False,False,12,False,True,36,False,True
+Mary Soon Lee,True,False,False,False,1.33333333333,0.5,3.0,False,True,10,True,True,37,False,False
+Zhixiang Chen,False,False,False,True,2.0,3.0,1.66666666667,False,False,10,True,True,22,True,True
+Mona Singh,True,False,False,True,0.8,2.0,0.5,False,False,9,False,True,10,False,False
+Justin Boyan,True,False,False,True,1.2,1.0,1.33333333333,False,False,11,False,True,23,False,False
+Daniel L. Silver,True,True,False,False,1.0,1.5,0.75,False,False,12,True,True,33,False,False
+David W. Aha,True,True,False,False,1.66666666667,2.0,1.5,False,True,10,False,True,15,False,True
+Robert S. Roos,True,True,False,False,1.5,1.0,2.0,False,False,10,True,True,27,False,False
+David Loewenstern,True,False,False,True,0.454545454545,0.5,0.428571428571,False,False,14,True,True,43,False,False
+Eric Baum,False,False,False,True,1.0,0.5,1.5,False,False,9,True,True,15,True,False
+John M. Zelle,True,True,False,False,0.8,0.5,1.0,False,True,10,False,True,22,False,False
+Arun Sharma,False,False,False,True,0.666666666667,0.5,0.75,False,True,9,False,True,19,True,True
+Ronitt Rubinfeld,True,False,False,True,0.666666666667,0.666666666667,0.666666666667,False,False,12,False,True,35,False,False
+Thomas Ellman,False,False,False,True,1.0,2.0,0.8,False,False,10,False,True,17,True,True
+Aaron Feigelson,True,False,False,True,0.555555555556,0.5,0.6,False,False,12,True,True,42,False,False
+Harris Drucker,True,False,False,True,0.857142857143,1.0,0.8,False,False,11,False,True,26,False,True
+Carla E. Brodley,True,True,False,False,0.714285714286,1.0,0.6,False,False,12,False,True,30,False,True
+Alexander M. Meystel,False,True,False,False,1.28571428571,1.5,1.2,False,False,14,False,True,45,True,False
+Maja Mataric,True,False,False,True,0.571428571429,0.666666666667,0.5,False,False,8,False,True,28,False,False
+Leonard Pitt,True,False,False,True,1.75,3.0,1.33333333333,False,False,11,True,True,16,False,False
+Eyal Kushilevitz,False,False,False,True,0.363636363636,0.25,0.428571428571,False,False,14,False,True,41,True,False
+Long-Ji Lin,True,False,True,True,2.33333333333,2.0,2.5,False,False,8,False,True,16,False,False
+Ameur Foued,False,False,False,True,1.0,0.666666666667,1.5,False,False,9,True,True,29,True,False
+Antoine Cornuejols,False,False,False,True,0.7,0.75,0.666666666667,False,False,13,True,True,62,True,False
+Welton Becket,True,False,False,True,1.0,1.0,1.0,False,False,10,False,True,24,False,False
+Haym Hirsh,True,False,False,True,0.8,1.0,0.75,False,False,9,False,True,7,False,False
+Hiroshi Motoda,True,False,False,True,1.16666666667,1.0,1.33333333333,False,True,11,False,True,43,False,False
+John Fischer,True,False,False,True,0.571428571429,0.5,0.6,False,False,11,False,True,17,False,False
+George A. Drastal,True,True,False,False,0.857142857143,1.5,0.6,False,False,13,True,True,35,False,True
+William Cohen,True,False,False,True,1.4,1.5,1.33333333333,False,False,11,True,True,30,False,False
+Jing Peng,True,False,False,True,1.0,1.0,1.0,False,False,7,False,True,7,False,False
+Alma Whitten,False,False,False,True,0.571428571429,0.5,0.6,False,False,11,False,True,20,True,True
+David Haussler,True,False,False,True,0.625,0.666666666667,0.6,False,False,12,True,True,31,False,False
+Joel Ratsaby,True,False,False,True,0.571428571429,1.0,0.4,False,False,11,True,True,18,False,False
+L. Thorne McCarty,False,True,False,False,0.285714285714,0.0,0.333333333333,False,False,15,False,True,26,True,True
+Chen K. Tham,False,True,False,False,1.0,1.0,1.0,False,False,10,False,True,12,True,True
+Kan Deng,True,False,False,True,0.75,1.0,0.666666666667,False,False,7,False,True,6,False,False
+Russell Greiner,True,False,False,True,1.0,0.666666666667,1.25,False,False,10,True,True,39,False,True
+Steffen Lange,False,False,False,True,1.4,1.0,1.66666666667,False,True,9,False,True,28,True,False
+Andrew W. Moore,False,True,False,False,1.2,0.333333333333,2.5,False,True,11,True,True,41,True,False
+Armand Prieditis,False,False,False,True,0.666666666667,0.25,1.0,False,False,12,True,True,48,True,True
+Dunja Mladenic,True,False,False,True,0.625,0.666666666667,0.6,False,False,12,False,True,35,False,True
+Jong-Hoon Oh,True,False,True,True,4.5,0,3.0,False,False,9,True,True,14,False,True
+Ken Lang,True,False,False,True,0.75,1.0,0.666666666667,False,False,7,False,True,6,False,False
+Bernhard Pfahringer,True,False,False,True,0.8,0.666666666667,0.857142857143,False,False,12,False,True,48,False,True
+Ronald L. Rivest,True,True,False,False,1.0,1.0,1.0,False,False,14,False,True,28,False,False
+Robert Williamson,True,False,False,True,0.6,0.5,0.666666666667,False,False,14,True,True,50,False,False
+Stuart Russell,False,False,False,True,0.857142857143,1.0,0.8,False,False,10,True,True,24,True,False
+Andrew Y. Ng,False,True,False,False,3.0,0,2.5,False,False,11,False,True,4,True,True
+Efim Kinber,False,False,False,True,0.666666666667,0.5,0.75,False,False,10,False,True,17,True,False
+David Finton,True,False,False,True,0.833333333333,1.0,0.75,False,False,10,False,True,21,False,False
+Mark Staley,True,False,False,True,0.666666666667,0.5,0.75,False,False,10,False,True,17,False,True
+Filippo Neri,True,False,False,True,1.75,1.5,2.0,False,True,9,False,True,30,False,False
+Jonathan Hodgson,True,False,False,True,1.14285714286,1.5,1.0,False,False,11,False,True,34,False,False
+Dennis F. Kibler,True,True,False,False,1.0,1.0,1.0,False,False,12,False,True,30,False,False
+Michael J. Donahue,True,True,False,False,1.0,0.75,1.33333333333,False,True,14,True,True,69,False,False

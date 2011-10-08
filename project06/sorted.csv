@@ -1,0 +1,298 @@
+Alexander M. Meystel, - 
+Alma Whitten, - 
+Ameur Foued, - 
+Andrew W. Moore, - 
+Andrew Y. Ng, - 
+Andrey Burago, - 
+Anselm Blumer, - 
+Antoine Cornuejols, - 
+Arlindo Oliveira, - 
+Armand Prieditis, - 
+Arun Sharma, - 
+Attilio Giordana, - 
+Avrim Blum, - 
+Bhaskar Dasgupta, - 
+Bradley L. Whitehall, - 
+Brian D. Davidson, - 
+Brian Tester, - 
+Bruce A. MacDonald, - 
+Charles X. Ling, - 
+Chen K. Tham, - 
+Chidanand Apte, - 
+Chris Darken, - 
+Chris Drummond, - 
+Chun-Nan Hsu, - 
+Claire Cardie, - 
+Clare Bates Congdon, - 
+Claude Sammut, - 
+Claudio Facchinetti, - 
+Craig Knoblock, - 
+Craig Nevill-Manning, - 
+Cristina Baroglio, - 
+Drago Indjic, - 
+Eddy Mayoraz, - 
+Ed Pednault, - 
+Efim Kinber, - 
+Emanuel Knill, - 
+Eric Allender, - 
+Eric Baum, - 
+Eyal Kushilevitz, - 
+Frank Stephan, - 
+Glenn Silverstein, - 
+Grigoris Karakoulas, - 
+Irina Tchoumatchenko, - 
+J. Jeffrey Mahoney, - 
+J. R. Quinlan, - 
+Jyrki Kivinen, - 
+Klaus P. Jantke, - 
+Krishnan Pillaipakkamnatt, - 
+L. Thorne McCarty, - 
+Lyle H. Ungar, - 
+Michael Scott, - 
+Myriam Abramson, - 
+Oded Maron, - 
+Olivier De Vel, - 
+Philip Chan, - 
+Phil Long, - 
+Prasad Tadepalli, - 
+Priscilla Rasmussen, - 
+R. Andrew McCallum, - 
+R. Bharat Rao, - 
+Scott E. Decatur, - 
+Shai Ben-David, - 
+Shaul Markovitch, - 
+Sholom Weiss, - 
+Sreerama K. Murthy, - 
+Sridhar Mahadevan, - 
+Stan Matwin, - 
+Stefan Kramer, - 
+Steffen Lange, - 
+Stephen Kwek, - 
+Stephen Muggleton, - 
+Steve A. Chien, - 
+Steven Minton, - 
+Steven Salzberg, - 
+Steven W. Norton, - 
+Stuart Russell, - 
+Thomas E. Kammeyer, - 
+Thomas Ellman, - 
+Thomas G. Dietterich, - 
+Thomas G. Spalthoff, - 
+Thomas Wengerek, - 
+Thomas Zeugmann, - 
+Usama Fayyad, - 
+Wray Buntine, - 
+Zhixiang Chen, - 
+Aaron Feigelson, + 
+Andy Bernard, + 
+Aurora Perez, + 
+Bala Kalyanasundaram, + 
+Barak A. Pearlmutter, + 
+Bernhard Pfahringer, + 
+Bill Byrne, + 
+Bir Bhanu, + 
+Bob Evans, + 
+Carla E. Brodley, + 
+Carl H. Smith, + 
+Creed Bratton, + 
+Cullen Schaffer, + 
+Dana Angluin, + 
+Dana Ron, + 
+Daniel Hennessy, + 
+Daniel Kortenkamp, + 
+Daniel L. Silver, + 
+Dan Oblinger, + 
+Dan Roth, + 
+Darko Zupanic, + 
+David B. Skalak, + 
+David Cohn, + 
+David Finton, + 
+David Gillman, + 
+David Haussler, + 
+David Helmbold, + 
+David Loewenstern, + 
+David Mathias, + 
+David Montgomery, + 
+David Pierce, + 
+David W. Aha, + 
+David W. Opitz, + 
+Dennis F. Kibler, + 
+Diana Gordon, + 
+Donna Slonim, + 
+Dunja Mladenic, + 
+Dwight Schrute, + 
+Earl S. Harris Jr., + 
+Fernando Pereira, + 
+Filippo Neri, + 
+Foster J. Provost, + 
+Gary M. Selzer, + 
+Gary Weiss, + 
+Geoffrey Gordon, + 
+George A. Drastal, + 
+George Berg, + 
+George H. John, + 
+Gerald F. DeJong, + 
+Hal Duncan, + 
+Haralabos Athanassiou, + 
+Harris Drucker, + 
+Haym Hirsh, + 
+Hiroshi Motoda, + 
+Hiroshi Tanaka, + 
+Holly Yanco, + 
+Huw Roberts, + 
+James S. Royer, + 
+Janusz Wnek, + 
+Jason Catlett, + 
+Javed Aslam, + 
+Jean-Daniel Zucker, + 
+Jean Gabriel Ganascia, + 
+Jeffery Clouse, + 
+Jeff Jackson, + 
+Jiarong Hong, + 
+Jing Peng, + 
+Joel Ratsaby, + 
+Joe Suzuki, + 
+Johanne Morin, + 
+Johannes Furnkranz, + 
+John Case, + 
+John Fischer, + 
+John M. Zelle, + 
+John Rachlin, + 
+John R. Rose, + 
+Jonathan Gratch, + 
+Jonathan Hodgson, + 
+Jong-Hoon Oh, + 
+Jorg-Uwe Kietz, + 
+Jose L. Balcazar, + 
+Joseph O'Sullivan, + 
+Jude Shavlik, + 
+Judy A. Franklin, + 
+Justin Boyan, + 
+Justinian Rosca, + 
+Kamal M. Ali, + 
+Kan Deng, + 
+Karsten Verbeurgt, + 
+Kate Goelz, + 
+Kazushi Ikeda, + 
+Kenji Yamanishi, + 
+Ken Lang, + 
+Kimmen Sjolander, + 
+Lance Fortnow, + 
+Lance Riley, + 
+Lars Asker, + 
+Leonard Pitt, + 
+Leslie Grate, + 
+Leslie Pack Kaelbling, + 
+Lindley Darden, + 
+Lisa Hellerstein, + 
+Long-Ji Lin, + 
+Lorenza Saitta, + 
+Lorien Y. Pratt, + 
+Maja Mataric, + 
+Malini Bhandaru, + 
+Mandayam T. Suraj, + 
+Manfred Warmuth, + 
+Marcos Salganicoff, + 
+Margo Guertin, + 
+Mario Marchand, + 
+Mark Changizi, + 
+Marko Grobelnik, + 
+Mark Schwabacher, + 
+Mark Staley, + 
+Mark W. Craven, + 
+Martinch Krikis, + 
+Martin Kummer, + 
+Mary Soon Lee, + 
+Masayuki Inaba, + 
+Matevz Kovacic, + 
+Matthias Heger, + 
+Melinda T. Gervasio, + 
+Merrick L. Furst, + 
+Michael A. meystel, + 
+Michael de la Maza, + 
+Michael I. Jordan, + 
+Michael J. Donahue, + 
+Michael Kearns, + 
+Michael Littman, + 
+Michael Redmond, + 
+Michael W. Barley, + 
+Michele Sebag, + 
+Minoru Asada, + 
+Mona Singh, + 
+Moshe Koppel, + 
+Moshe Leshno, + 
+Nader Bshouty, + 
+Naoki Abe, + 
+Nathalie Japkowicz, + 
+Neela Khan, + 
+Neil Berkman, + 
+Nicolas Fiechter, + 
+Nicolo Cesa-Bianchi, + 
+Nikolay Nikolaev, + 
+Nina Mishra, + 
+Nitin Indurkhya, + 
+Pang-Chieh Chen, + 
+Pascal Koiran, + 
+Pat Langley, + 
+Patricia J. Riddle, + 
+Patrick M. Murphy, + 
+Paul Fischer, + 
+Paul Utgoff, + 
+Paul Vitanyi, + 
+Paul W. Goldberg, + 
+Peter Bartlett, + 
+Randolph Jones, + 
+Reinhard Blasig, + 
+Ricard Gavalda, + 
+Richard A. Caruana, + 
+Richard S. Sutton, + 
+Rich Maclin, + 
+Robert C. Holte, + 
+Roberto Piola, + 
+Robert P. Daley, + 
+Robert Schapire, + 
+Robert Sloan, + 
+Robert S. Roos, + 
+Robert Williamson, + 
+Ronald L. Rivest, + 
+Roni Khardon, + 
+Ronitt Rubinfeld, + 
+Ron Kohavi, + 
+Russell Greiner, + 
+Sally Goldman, + 
+Sandra Panizza, + 
+Sanjay Jain, + 
+Satinder Pal Singh, + 
+Sean Slattery, + 
+Sebastian Seung, + 
+Seth Flanders, + 
+Sonya Snedecor, + 
+Susan L. Epstein, + 
+Takefumi Yamazaki, + 
+Tal Grossman, + 
+Tapio Elomaa, + 
+Tatsuo Unemi, + 
+Timothy P. Barber, + 
+Tom Bylander, + 
+Tom Fawcett, + 
+Tom Hancock, + 
+Tom M. Mitchell, + 
+Toshiyasu Matsushima, + 
+Vijay Raghavan, + 
+Von-Wun Soo, + 
+Wai Lam, + 
+Wan P. Chiang, + 
+Wee Sun Lee, + 
+Welton Becket, + 
+William A. Greene, + 
+William Cohen, + 
+William Gasarch, + 
+William Sakas, + 
+Wolfgang Janko, + 
+Wolfgang Maass, + 
+Xuemei Wang, + 
+Yishay Mansour, + 
+Yoav Freund, + 
+Yolanda Gil, + 
+Yoram Singer, + 
+Yoshifumi Sakai, + 
