@@ -44,5 +44,8 @@ def set_input_values(network, input_values):
       node.initial_value = value
 
 if __name__ == "__main__":
+   # construct a network with 3 input nodes, 2 hidden nodes, and 3 output
+   # nodes
+   # the initial values should be as listed in the second argument
    n = construct_network([3,2,3], [1.0, 0.25, -0.5])
    print n
