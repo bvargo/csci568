@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 
-import random
 import math
+import random
 
 from node import Node
 from arc import Arc
+
+# approximation of slope of tanh, provided by CI
+def dtanh(x):
+   return 1.0 - x * x
 
 # sizes is an array of integers, indicating the size of each layer
 # input_values is a list of input values for the first layer of the network;
@@ -43,9 +47,53 @@ def set_input_values(network, input_values):
    for node, value in zip(network[0], input_values):
       node.initial_value = value
 
+# back propogation on the network with the specified output values and the
+# learning rage
+def backpropogate(network, target_values, N=0.5):
+   output_delta = [0.0] * len(network[-1])
+   hidden_delta = [0.0] * len(network[-2])
+
+   # calculate delta values for the output layer
+   for i, onode in enumerate(network[-1]):
+      # the node's value
+      value = onode.value()
+
+      # error in the value
+      error = target_values[i] - value
+
+      # calculate the delta based on the error
+      output_delta[i] = dtanh(value) * error
+
+   # calculate delta values for the hidden layer
+   for i, hnode in enumerate(network[1]):
+      error = 0.0
+      for k, parent_arc in enumerate(hnode.parents):
+         error += output_delta[k] * parent_arc.weight
+      hidden_delta[i] = dtanh(hnode.value()) * error
+
+   # update output weights
+   for i, hnode in enumerate(network[1]):
+      for j, child_arc in enumerate(hnode.children):
+         change = output_delta[j] * hnode.value()
+         child_arc.weight += N * change
+
+   # update input weights
+   for i, inode in enumerate(network[0]):
+      for j, hidden_arc in enumerate(inode.children):
+         change = hidden_delta[j] * inode.value()
+         hidden_arc.weight += N * change
+
 if __name__ == "__main__":
    # construct a network with 3 input nodes, 2 hidden nodes, and 3 output
    # nodes
    # the initial values should be as listed in the second argument
    n = construct_network([3,2,3], [1.0, 0.25, -0.5])
+   print "Before training:"
+   print n
+   print
+
+   for i in range(0, 100):
+      backpropogate(n, [1.0, -1.0, 0.0])
+
+   print "After 100 back propogations"
    print n
