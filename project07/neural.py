@@ -99,7 +99,7 @@ def backpropogate(network, target_values, N=0.5):
                change = deltas[layer_n][i] * arc.parent.last_value
                arc.weight += N * change
 
-if __name__ == "__main__":
+def main():
    # construct a network with 3 input nodes, 2 hidden nodes, and 3 output
    # nodes
    # the initial values should be as listed in the second argument
@@ -113,3 +113,32 @@ if __name__ == "__main__":
 
    print "After 100 back propogations"
    print n
+
+def main_xor():
+   # an XOR example - see how the lack of a hidden layer can lead to a bad
+   # function approximator
+
+   # a network with a hidden layer of 5 nodes works well
+   n = construct_network([2,5,1])
+   # a network without a hidden layer does not work at all
+   #n = construct_network([2,1])
+
+   test_cases = {(0.0, 0.0): (0.0,),
+                 (0.0, 1.0): (1.0,),
+                 (1.0, 0.0): (1.0,),
+                 (1.0, 1.0): (0.0,)}
+
+   for i in range(0, 1000):
+      for case in test_cases:
+         set_input_values(n, case)
+         backpropogate(n, test_cases[case])
+
+   for case in test_cases:
+      set_input_values(n, case)
+      print "XOR input:", case
+      print "expected:", test_cases[case][0]
+      print "actual:  ", n[-1][0].value()
+      print
+
+if __name__ == "__main__":
+   main()
