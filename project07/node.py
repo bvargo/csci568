@@ -12,6 +12,9 @@ class Node(object):
    # the initial value of the node
    initial_value = 0
 
+   # the value the last time value() was called
+   last_value = 0.0
+
    # if parents and/or children are specified, it is assumed that hte arcs are
    # configured by an external function
    def __init__(self, initial_value = 0, parents = None, children = None):
@@ -41,7 +44,9 @@ class Node(object):
       for parent in self.parents:
          current_sum += parent.parent.value() * parent.weight
 
-      return math.tanh(current_sum)
+      self.last_value = math.tanh(current_sum)
+
+      return self.last_value
 
    def __repr__(self):
       return "N(%f)" % (self.value())
