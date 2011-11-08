@@ -1,5 +1,7 @@
 # a single node in the neural network
 
+import math
+
 from arc import Arc
 
 class Node(object):
@@ -39,7 +41,7 @@ class Node(object):
       for parent in self.parents:
          current_sum += parent.parent.value() * parent.weight
 
-      return current_sum
+      return math.tanh(current_sum)
 
    def __repr__(self):
       return "N(%f)" % (self.value())
