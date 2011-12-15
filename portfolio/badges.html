@@ -23,10 +23,125 @@
 
          <h2>Application: The Badges Problem</h2>
          <p class="introduction">
-            Introduction.
+            The badges problem consisted of two attributes: a name and whether
+            te person was "good" or "bad" in the context of the problem. For
+            instance, the name "Joe Suzuki" was marked as good in the dataset.
+            The objective of the problem was to find a rule that could predict
+            whether a name was good or bad given only the name. This would
+            require feature abstraction in order to find features that may
+            lead to a correct solution. A decision tree was created using
+            features abstracted from the name in order to test whether the
+            features had any correlation with the value of a given name.
          </p>
 
-         Content from project 6.
+         <p>
+            I began the process by exploring the data. At first, I did this by
+            looking at the raw, unmodified file. I initially had a few ideas,
+            such as length of name, starting character, etc, which I tested
+            manually, but no no avail.
+         </p>
+
+         <p>
+            Deciding that future testing would be far easier with using a
+            program, I created a Python program that was able to apply
+            functions to the dataset and add columns. This was accomplished by
+            using the CSV file, the Python csv module, and lists for the
+            intermediate representation of the data. The name was read from
+            the first column and split on spaces, as my intuition said that
+            there could be some relationship between the parts of the name,
+            and the + or - column was converted into a boolean value. In
+            addition, I found that one of the values had incorrect spacing for
+            the + attribute; I fixed the raw data at this point, so that the
+            boolean values would map correctly.
+         </p>
+
+         <p>
+            My Python program was, at this point, able to add columns, but
+            this was not enough for Weka's CSV reader, which I was going to
+            use to automate the decision-tree building process, as there may
+            be several attribute together that define the classification. Weka
+            had problems with the single quotation mark in "O'Sullivan". In
+            addition, Weka needed the first row to consist of attribute names.
+            I modified my program accordingly so that the function name used
+            to add each attribute became the attribute name in the first row.
+            Running Weka (with J48), I saw what I already knew: my initial
+            guesses were wrong.
+         </p>
+
+         <p>
+            At this point, I started adding a number of attributes, as I could
+            not think of any other way to automate the classification process.
+            I tried many different tests, such as the ratio of consants to
+            vowls; the ratio of the lengths of the first and last parts of the
+            name; the number of vowles; the number of consants; whether the
+            word started with a vowel; etc. Eventually my attributes produced
+            a relatively good tree; I could classify with a 78% correct rate,
+            but the tree was complicated, so I figured that there had to be a
+            better solution.
+         </p>
+
+         <p>
+            At this point, thinking that there was a clue hidden in the
+            episode of The Office linked from the page, I watched the entire
+            episode. Nothing. I read the Wikipedia page on The Office. I
+            learned that The Office has 7 different related shows, depending
+            on the country in which the show is set, but I did not get any
+            clues about the list of winners or losers. Being Wikipedia, I
+            ended up reading about a number of languages and features of
+            languages, and I ended up at the page on digraphs.
+         </p>
+
+         <p>
+            Digraphs or digrams are pairs of characters that together make one
+            sound. Digraphs are similar to ligatures, except that the two
+            characters remain distinct. For example, the word nickel has a
+            digraph "ck" in the middle. I decided to test for digraphs at the
+            start of the first and last names. At first, I focused on digraphs
+            made of consonants, since was easier to check for. Bingo. I was
+            not testing for digraphs specifically, just two consonants at the
+            beginning of each word, but I got a result, shown in the diagram
+            below. Names that began with a two-consonant digraph were losers,
+            while names without the digraph were winners, for the most part.
+            On further analysis, it turns out that people with vowels at the
+            second letter position were winners, while everyone else was a
+            loser, for the general case. My digraph test case had a bug: it
+            checked to see if the character was in a string using the
+            following Python syntax: 'x' in 'aeiou' . The names are all
+            capitalized, so the first letter will never be any of 'aeiou',
+            case sensitive. Thus the test was the same as checking for a
+            consonant or vowel in the second character of the name.
+         </p>
+
+         <p>
+            There were four misclassified values. This corresponded with what
+            was said in class, so I considered the decision tree "good
+            enough." 
+         </p>
+
+         <h4>Confusion matrix:</h4>
+         <pre>
+   a   b   -- classified as
+  84   1 |   a = False
+   3 210 |   b = True
+         </pre>
+
+         <h4>J48 pruned tree:</h4>
+         <p>
+            consonant_digraph_beginning = True: False (87.0/3.0) <br />
+            consonant_digraph_beginning = False: True (211.0/1.0)
+         </p>
+
+         <img src="badges-screenshot2.png" alt="J48 pruned tree" />
+
+         <h4>Before finding the solution - confusion matrix:</h4>
+         <pre>
+   a   b   -- classified as
+  20  65 |   a = False
+  18 195 |   b = True
+         </pre>
+
+         <h4>Before finding the solution - J48 pruned tree:</h4>
+         <img src="badges-screenshot2.png" alt="J48 pruned tree" />
       </div>
    </body>
 </html>
