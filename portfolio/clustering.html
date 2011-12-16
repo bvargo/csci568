@@ -23,36 +23,221 @@
 
          <h2>Cluster Analysis</h2>
          <p class="introduction">
-            Introduction about what we mean by clustering.
+            Clustering algorithms are used to find groups of like records in
+            a dataset where there is little prior knowledge. That is, the
+            clustering algorithm clusters like records together into groups
+            that were not known before the start of the algorithms. This is
+            unlike classification, where the groups are known before the start
+            of the algorithm.
+         </p>
+
+         <p>
+            There are two main types of clustering algorithms: partitional and
+            hierarchical. Partitional algorithms divide the data records into
+            disjoint sets, meaning that a single record belongs to a single
+            cluster. Each disjoint set is a cluster. Hierarchical clustering,
+            on the other hand, divides data into clusters arranged in a
+            hierarchy.  That is, a single point belongs to a series of
+            clusters that get larger further up the hierarchy. A single large
+            cluster may consist of many small clusters. The entire dataset
+            itself could be considered one large cluster, and indeed this is
+            the end condition of agglomerate hierarchical clustering, described
+            further down on this page.
+         </p>
+
+         <p>
+            Cluster can also be prototype-based, density-based, or
+            graph-based.  Prototype-based clusters are based on the similarity
+            of a record to a prototype that belongs to a single cluster, such
+            as the average center of a cluster, known as a centroid.
+            Density-based clusters define clusters based on connected
+            components. Two points are connected if they are within a certain
+            distance of each other.  Finally, graph-based clusters define
+            clusters based on interconnections between nodes.
          </p>
 
          <h3>K-Means</h3>
          <h4>Description</h4>
+         <p>
+            K-Means is a partitioning clustering algorithm based on cluster
+            prototypes.  The input to the algorithm is the dataset and K, the
+            number of clusters that the algorithm should produce. The
+            algorithm then places K random points in the dataset. Each point
+            is then associated with the closest of the K placed points. Each
+            of the K points is then moved to the centroid of all of the points
+            with which it is associated. The algorithm repeats until no data
+            point switches clusters.
+         </p>
 
          <h4>Benefits and Drawbacks</h4>
+         <p>
+            The primary benefit of K-Means is that it is both easy to
+            implement and fast, as the number of similarity calculations is
+            O(K * N), where K is the number of clusters, and N is the number
+            of data points. Since K is generally far smaller than N, the
+            algorithm is much faster than algorithms that rely upon
+            calculating the similarity between all pairs of points.
+         </p>
+
+         <p>
+            The primary drawback of K-Means is that it is susceptible to noise
+            and the random initial points. Noise points may become their own
+            clusters, leaving less clusters for the rest of the data and
+            causing large SSE (sum of squares error) values. The random
+            initial points can also result in different clusterings depending
+            on which initial points are chosen.  Another issue is if one or
+            more random points are not assigned any data points; in this case,
+            picking a new random point is required.
+         </p>
+
+         <p>
+            A second drawback of K-Means is that the number K must be chosen.
+            The choice of K depends on the dataset being mined and what an
+            data analyst thinks is appropriate. It is possible to modify K-Means
+            in order to add or remove clusters from the final result, but
+            extra analysis must be performed before using the final result
+            from K-Means in any case.
+         </p>
 
          <h4>Common Use Cases</h4>
+         <p>
+            The primary use case for K-Means is when the number of clusters
+            is known. K-Means can be combined with other clustering algorithms
+            in order to produce a final result. In additional, K-Means is often
+            used with large datasets, since it is faster than other algorithms.
+            However, as noted above, care must be taken if K is not known before
+            running the algorithm, in order to ensure good results.
+         </p>
 
-         <h3>Agglomerate Hierarchial</h3>
+         <h3>Agglomerate Hierarchical Clustering</h3>
          <h4>Description</h4>
+         <p>
+            Agglomerate hierarchical clustering groups records into a tree
+            structure of clusters. That is, a data point may be a member of
+            several different clusters of varying sizes, where the larger
+            clusters are comprised of smaller clusters. For example, when
+            classifying species, a dog could be a member of both the animal
+            kingdom (Animalia) and the Canis genus, in addition to other
+            clusters such as the phylum, class, order, family, and species.
+         </p>
+
+         <p>
+            The agglomerate hierarchical clustering algorithm is quite simple.
+            Given N data points, each point is assigned to its own cluster.
+            The two closest clusters are then continually merged until only
+            one cluster remains. During the merging, each cluster produced is
+            maintained by the algorithm.
+         </p>
+
+         <p>
+            There any many ways to calculate the distance between two
+            clusters.  The average distance between points in the cluster can
+            be used, as could the minimum and maximum distances between two
+            points in the cluster. Like K-Means, centroids for each cluster
+            could also be produced, and then the distance between centroids
+            results in the distance between clusters.
+         </p>
 
          <h4>Benefits and Drawbacks</h4>
+         <p>
+            The primary benefit of agglomerate hierarchical clustering is the
+            structured hierarchy that comes from the algorithm, if this
+            tree-like structure is appropriate for the data being mined. Even
+            if the hierarchy of clusters is not needed for a final result, it
+            can still be used to find the best K by analyzing the error of
+            each cluster. This can then be used as an input for K-Means. In
+            addition, an initial clustering for K-Means can be provided by
+            starting with the centroids of each cluster from the
+            agglomerate hierarchical clustering output.
+         </p>
+
+         <p>
+            The primary drawback of this algorithm is the time and space
+            complexity.  According to Tan, the time complexity falls between
+            O(N^2 log(N)) and O(N^3) for N data points, depending on how the
+            distances between clusters are computed.  Also, the space
+            complexity is high at O(N^2), due to the similarity metrics being
+            produced between all pairs of points. This makes it infeasible for
+            large datasets.
+         </p>
+
+         <p>
+            A second drawback is that all cluster merges are final. This can
+            lead to local minima that produce sub-optimal clusterings. This is
+            particularly true if there is noisy data.
+         </p>
 
          <h4>Common Use Cases</h4>
+         <p>
+            Common use cases include datasets for which a taxonomy is
+            appropriate or desired. Other common uses, as noted above, include
+            using this algorithm to find an appropriate number of clusters for
+            K-Means in addition to starting centroids.
+         </p>
 
          <h3>DBSCAN</h3>
          <h4>Description</h4>
+         <p>
+            DBSCAN (Density-Based Spatial Clustering of Applications with
+            Noise) is a density-based clustering algorithm. That is, it uses a
+            metric of the number of points within eps, a user-defined distance
+            surrounding a given point, in order to define the density of a
+            region. This algorithm can recognize non-globular clusters.
+         </p>
+
+         <p>
+            The algorithm for DBSCAN is slightly more involved than the
+            K-Means and Hierarchical Agglomerate clustering algorithms. In
+            addition to the previously-mentioned eps, the user also provides
+            another parameter, minPts, which is the threshold for the number
+            of points within eps that must be present in order for a point to
+            be considered a core point instead of an edge point or noise.
+         </p>
+
+         <p>
+            A simple version of DBSCAN works as follows. The algorithm begins
+            by marking all points as noise. For each point P, the algorithm
+            then determines the number of points within eps distance of P. If
+            this number of points is greater than minPts, then P is labeled
+            a core point. Once all core points have been found, then core
+            points within eps distance of each other are connected into
+            connected regions.  Finally, all noise points within eps distance
+            of a core point are labeled as edge points and are added to the
+            closest connected region. These connected regions are then the
+            clusters produced by the algorithm.
+         </p>
 
          <h4>Benefits and Drawbacks</h4>
+         <p>
+            The primary benefits of DBSCAN is that the clusters can be
+            non-globular and the algorithm is not susceptible to noise. First,
+            non-globular means that the clusters can be arbitrary shapes, and
+            clusters can even be surrounded by other clusters. For example, a
+            central circle cluster could be surrounded by a ring-shaped
+            cluster.  Second, since DBSCAN finds noise points and these points
+            are not added to clusters, the resulting clusters are not overtly
+            affected by the noise points.  In addition, since the noise points
+            do not belong to any cluster, DBSCAN can be used for detecting
+               outliers.
+         </p>
+
+         <p>
+            There are two primary drawbacks of DBSCAN. First, the algorithm
+            does not perform well on highly dimensional data, since the notion
+            of density in a high dimensional space may not be well defined.
+            Second, the algorithm does not perform well with varying
+            densities, due to the static nature of eps and minPts. If eps is
+            small, then high density clusters may be found, but low-density
+            clusters may be labeled as noise. If eps is large, then close
+            high-density clusters may be merged into a single cluster.
+         </p>
 
          <h4>Common Use Cases</h4>
-
-         <pre class="code">
-#
-# the python implementation here
-#
-#
-         </pre>
+         <p>
+            Common use cases include low-dimensional datasets that may contain
+            non-globular clusters. Another common use is for finding and
+            removing noise points.
+         </p>
       </div>
    </body>
 </html>
