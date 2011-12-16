@@ -1,0 +1,13 @@
+.Constant { color: #00ff00; }
+.Identifier { color: #00ffff; }
+.Statement { color: #8080ff; font-weight: bold; }
+.PreProc { color: #ff40ff; }
+.Comment { color: #ff6060; }
+
+pre.code {
+  padding: 20px;
+  background-color: #000;
+  color: #fff;
+  font-size: 120%;
+  font-family: monospace;
+}

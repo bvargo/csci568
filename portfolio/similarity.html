@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="css/blueprint/screen.css" type="text/css" media="screen, projection" />
       <link rel="stylesheet" href="css/blueprint/print.css" type="text/css" media="print" />
       <link rel="stylesheet" href="css/main.css" type="text/css" media="screen" />
+      <link rel="stylesheet" href="css/code.css" type="text/css" media="screen" />
       <!--[if IE]>
          <link rel="stylesheet" href="css/blueprint/ie.css" type="text/css" media="screen, projection">
       <![endif]-->
@@ -23,23 +24,130 @@
 
          <h2>Similarity Metrics</h2>
          <p class="introduction">
-            Introduction about what calculating similarity means.
+            Similarity metrics (and the related dissimilarity metrics) are
+            used to determine quantitatively how similar two records are to
+            one another.  The output of a similarity metric is a number on a
+            scale from zero to one, with zero indicating no similarity and one
+            indicating two records are the same.
          </p>
 
-         Two of:
-         <h3>Euclidean Distance</h3>
-         <h3>SMC</h3>
-         <h3>Jaccard</h3>
-         <h3>Tanimoto</h3>
-         <h3>Pearson Correlation</h3>
-         <h3>Cosine Similarity</h3>
+         <p>
+            Popular similarity metrics include euclidean distance (and the
+            more general Minkowski distance), simple matching coefficient,
+            Jaccard coefficient, Tanimoto coefficient, Pearson correlation,
+            and cosine similarity. In this document, I will discuss the
+            Minkowski distance, the simple matching coefficient, and the
+            Jaccard coefficient.
+         </p>
 
-         <pre class="code">
-#
-# the python implementation here
-#
-#
-         </pre>
+         <h3>Minkowski Distance / Euclidean Distance</h3>
+         <p>
+            Euclidean distance is the "normal" distance betwen two points in a
+            given space. In 2D, it is the same distance as that given for the
+            hypotenuse between two points as given by the Pythagorean formula.
+            It can be defined as the square root of the sum of differences for
+            each dimension. This distance function is best used for ratio data.
+         </p>
+
+         <p>
+            This can be generalized Minkowski distance, which generalizes the
+            formula for Euclidean distance and another distance metric, the
+            Manhattan distance.  The Minkowski distance is defined as the pth
+            root of the sum of the differences raised to the 1/p power of each
+            dimension.
+         </p>
+
+         <p>
+            The following code listing shows the Minkowski distance and the
+            Euclidean distance, as implemented in Python.
+
+<pre class="code">
+<span class="Comment"># similarity metric functions</span>
+<span class="Comment">#</span>
+<span class="Comment"># each function takes two iterable objects, where the values returned by the</span>
+<span class="Comment"># iteration corresponds to the values that should be used for calculating the</span>
+<span class="Comment"># similarity metrics</span>
+
+<span class="Comment"># the minkowski distance, where r is the exponent to use</span>
+<span class="Statement">def</span> <span class="Identifier">minkowski_distance</span>(a, b, r):
+   a = <span class="Identifier">list</span>(a)
+   b = <span class="Identifier">list</span>(b)
+
+   s = <span class="Identifier">sum</span>([<span class="Identifier">pow</span>(<span class="Identifier">abs</span>(i - j), r) <span class="Statement">for</span> i, j <span class="Statement">in</span> <span class="Identifier">zip</span>(a, b)])
+
+   <span class="Statement">return</span> <span class="Identifier">pow</span>(s, <span class="Constant">1.0</span>/r)
+
+<span class="Comment"># returns a similarity - 0.0 = not similar, 1.0 = equal</span>
+<span class="Statement">def</span> <span class="Identifier">euclidean_similarity</span>(a, b):
+   <span class="Statement">return</span> <span class="Constant">1.0</span> / (<span class="Constant">1.0</span> + minkowski_distance(a, b, <span class="Constant">2</span>))
+</pre>
+
+         <h3>Simple Matching Coefficient (SMC)</h3>
+
+         <p>
+            The Simple Matching Coefficient (SMC) is a ratio to the number of
+            attributes that are equal between two records divided by the total
+            number of attributes. This is best used when the data is
+            symmetric; that is, both the presence and absence of data is
+            interesting for binary data, or all of the values are equally
+            interesting. An example of the latter scenario is gender: it
+            matters if both records are both male or both female, but the
+            records are considered different if one record is male while the
+            other record is female.
+         </p>
+
+         <p>
+            The following code listing shows the SMC implemented in Python.
+         </p>
+
+<pre class="code">
+<span class="Comment"># returns a similarity - 0.0 = not similar, 1.0 = equal</span>
+<span class="Statement">def</span> <span class="Identifier">simple_matching_similarity</span>(a, b):
+   a = <span class="Identifier">list</span>(a)
+   b = <span class="Identifier">list</span>(b)
+   zipped = <span class="Identifier">zip</span>(a, b)
+
+   match = <span class="Identifier">sum</span>([<span class="Constant">1</span> <span class="Statement">for</span> i, j <span class="Statement">in</span> zipped <span class="Statement">if</span> i == j])
+   total = <span class="Identifier">len</span>(zipped)
+
+   <span class="Statement">return</span> <span class="Identifier">float</span>(match) / total
+</pre>
+
+         <h3>Jaccard Coefficient</h3>
+
+         <p>
+            The Jaccard coefficient is similar to the SMC, but it is used for
+            asymmetric data. That is, for a binary attribute, if both values
+            are false, then the attribute will not contribute toward the
+            similarity metric. This means that the Jaccard coefficient can be
+            defined as the number of attributes that are both True between two
+            records divided by the number of attributes where at least one
+            value is True. This is useful for market basket data. Most people
+            do not buy most items.  Using the SMC would result in most
+            transactions looking similar, since most people did not buy
+            most of the products. With the Jaccard coefficient, an item is
+            only counted if one of the transactions being compared contains
+            the item in the market basket.
+         </p>
+
+         <p>
+            The following code listing shows the Jaccard coefficient
+            implemented in Python.
+         </p>
+
+<pre class="code">
+<span class="Comment"># returns a similarity - 0.0 = not similar, 1.0 = equal</span>
+<span class="Comment"># attributes are converted to booleans</span>
+<span class="Statement">def</span> <span class="Identifier">jacard_similarity</span>(a, b):
+   a = <span class="Identifier">list</span>(a)
+   b = <span class="Identifier">list</span>(b)
+   zipped = <span class="Identifier">zip</span>(a, b)
+
+   match = <span class="Identifier">sum</span>([<span class="Constant">1</span> <span class="Statement">for</span> i, j <span class="Statement">in</span> zipped <span class="Statement">if</span> i == j <span class="Statement">and</span> <span class="Identifier">bool</span>(i) == <span class="Identifier">True</span>])
+   total = <span class="Identifier">sum</span>([<span class="Constant">1</span> <span class="Statement">for</span> i, j <span class="Statement">in</span> zipped <span class="Statement">if</span> i <span class="Statement">or</span> j])
+
+   <span class="Statement">return</span> <span class="Identifier">float</span>(match) / total
+</pre>
       </div>
    </body>
 </html>
