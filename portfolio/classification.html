@@ -23,43 +23,150 @@
 
          <h2>Classification</h2>
          <p class="introduction">
-            Introduction about classification and the typical process (training, testing, validation).
+            Classification is the process of assigning data object to a group
+            or class, where the possible groups have been predefined and are
+            known to the algorithm. Further, classification is a supervised
+            learning process; example data records are given for each class,
+            and the various algorithms use these example data records (the
+            training set) in order to create a model. This model is then
+            tested against the training set during a testing phase, to
+            determine the performance of the model against data that has
+            already been seen. Finally, the model is tested against another
+            dataset, the validation dataset, which is a set of records for
+            which the class is also known but the records were not included in
+            the training set. This ensures that the model is not overfitting
+            the model data or otherwise performing poorly on data records that
+            were not part of the training set.
          </p>
 
          <h3>Decision Tree</h3>
          <h4>Description</h4>
 
-         <h4>Benefits and Drawbacks</h4>
+         <p>
+            Decision tree classifiers produce decision trees, or trees of
+            questions that, when answered, dictate the branch of the tree that
+            is "followed" by an item being classified. The leaf nodes of the
+            tree are classification labels. For example, a decision could be
+            binary (e.g. age >= 20 can be True or False), or a decision can
+            produce multiple children (e.g. age 0-20, age 21-40, age 41-64,
+            age 65+).
+         </p>
 
-         <h4>Common Use Cases</h4>
+         <p>
+            Choosing the best attribute on which to make a decision at a given
+            point is determined by creating the partition that results in the
+            most information gain.
+         </p>
+
+         <h4>Benefits and Drawbacks</h4>
+         <p>
+            Decision trees, once build, are fast at classifying new data
+            objects.  This is because the new data object simply follows the
+            questions in the tree, rather than comparing the data object to
+            existing data objects. The speed is a benefit, but the static
+            nature of the model is also a drawback. A decision tree must be
+            rebuilt in order to take new data points into account.
+         </p>
+
+         <p>
+            A second advantage is that decision trees are easy to interpret.
+            If a data object is misclassified, it is easy to look at the decision
+            tree to determine the incorrect path that the data record followed.
+            Conversely, if the classification algorithm produces a correct
+            result, it is also possible to determine which attributes
+            influenced the correct result.
+         </p>
 
          <h3>Rule-Based Classifier</h3>
          <h4>Description</h4>
+         <p>
+            Rule-based classifiers classify objects by comparing the
+            attributes of a new data object to a series of rules, in order.
+            The first rule that matches determines the class label of the new
+            data object.
+         </p>
+
+         <p>
+            Rule-based classifiers can be created using both direct and
+            indirect methods. Direct methods determine rules directly from the
+            dataset.  Indirect methods determine rules by extracting the rules
+            from another classification algorithm, such as a decision tree.
+            Each path through a decision tree results in a single rule for a
+            rule-based classifier.
+         </p>
+
+         <h4>Benefits and Drawbacks</h4>
+         <p>
+            Like decision trees, rulesets are easy to interpret. They are also
+            relatively fast to traverse, depending on the number of rules, but
+            can be slower than a decision tree producing identical results.
+         </p>
+
+         <p>
+            The rule-based classifier also includes the same drawbacks as the
+            decision tree: the static nature of the model.
+         </p>
+
+         <h3>Nearest Neighbor</h3>
+         <h4>Description</h4>
+         <p>
+            The K nearest neighbor approach relies upon similarity metrics
+            in order to determine the class of an unknown data record.  Given
+            a set of labeled training data and a record to label, the K points
+            nearest to the record to label are found. The predominant class is
+            then used to assign a class label to the unknown record.
+         </p>
 
          <h4>Benefits and Drawbacks</h4>
 
-         <h4>Common Use Cases</h4>
+         <p>
+            The K nearest neighbor algorithm does not have a static model; new
+            training data can be added at any time. This makes the model
+            dynamic, but at a cost of speed. In order to determine the K
+            nearest neighbors, similarity metrics must be calculated between
+            all training points and the point to be classified. This can be
+            slow. In addition, due to the reliance on similarity metrics, the
+            K nearest neighbors algorithm can lose meaning in environments
+            with a large number of dimensions, depending on the similarity
+            metric used.
+         </p>
 
          <h3>Artificial Neural Networks</h3>
          <h4>Description</h4>
+         <p>
+            Artificial neural networks mimic the working of the brain. Nodes
+            are connected by edges in a graph. Each edge has a weight, and
+            each node has a value. The input nodes have their value set to
+            user-defined values, and then the values of the other nodes are
+            found by summing the incoming values (from the input or other
+            nodes with values determined, where these values have been
+            multiplied by the weights) and then running the resulting value
+            through an activation function. The output node values are then
+            read in order to produce an overall result.  In classification,
+            each input node may correspond to to an attribute of a data
+            record. Each output node may then correspond to the probability
+            that the given input record is of a particular class.  This model
+            is trained using a training set using backpropogation in order to
+            find the correct weights of the network to minimize the
+            classification error.
+         </p>
 
          <h4>Benefits and Drawbacks</h4>
-
-         <h4>Common Use Cases</h4>
+         <p>
+            The primary drawback of the artificial neural network is that it
+            is opaque; it is not easy to see what caused a neural network to
+            produce a given result. However, there are a number of advantages.
+            First, neural networks are fast at classifying new data records.
+            Second, neural networks can be trained at any point in time; a
+            previous model can be updated, rather than having to throw out the
+            entire model and start from scratch.
+         </p>
 
          <h3>Bayesian Classifier</h3>
          <h4>Description</h4>
-
-         <h4>Benefits and Drawbacks</h4>
-
-         <h4>Common Use Cases</h4>
-
-         <pre class="code">
-#
-# the python implementation here
-#
-#
-         </pre>
+         The naïve bayesian classifier uses probability to determine class
+         labels using Baye's theorem and conditional probability. The class
+         with the highest probability is assigned to the data record.
       </div>
    </body>
 </html>
