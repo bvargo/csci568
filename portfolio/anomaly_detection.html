@@ -23,23 +23,57 @@
 
          <h2>Anomaly Detection</h2>
          <p class="introduction">
-            Introduction. Sources of anomalies. Issues surrounding anomaly detection.
+            Anomaly detection is the process of finding anomalies, or outliers,
+            in a given dataset. Anomalies may occur naturally due to rare
+            processes. Anomalies may also occur due to abnormal or fraudulant
+            behavior. For example, a credit card company may wish to perform
+            anomaly detection on credit card transactions in order to limit
+            fraud in case a credit card is stolen. This presents an issue: when
+            is an event rare compared to being a true anomaly? In the case
+            of the credit card company, when should the credit card be
+            deactivated?
          </p>
 
-         <h3>Statistical approaches + strength/weakness</h3>
+         <h3>Statistical approaches</h3>
+         <p>
+            Statistics is the most straightforward way to detect anomalies.
+            The mean and standard deviation, in addition to other possible
+            summary statistics, are computed for each attribute of a set of
+            data records. Using these values, it is possible to determine if a
+            given data point falls outside of an acceptable tolerance range
+            surrounding most of the data. These points are the anomalies.
+         </p>
 
-         <h3>Proximity approaches + strength/weakness</h3>
+         <p>
+            This approach works well for datasets with a small number of
+            dimensions, especially for attributes that are normally
+            distributed. If these properties are violated, it may be less
+            meaningful to use statistics without additional approcaches to
+            determine outliers.
+         </p>
 
-         <h3>Density approaches + strength/weakness</h3>
+         <h3>Proximity approaches</h3>
+         Proximity approaches to anomaly detection involve looking at close
+         a given data point is to the nearest K neighbors. This can be
+         directly found by running the k-nearest neighbor classifier
+         and then finding the points that have the largest distances to the
+         nearest neighbors.
 
-         <h3>Clustering approaches + strength/weakness</h3>
+         <h3>Density approaches</h3>
+         <p>
+            A density-based approach to anomaly detection determines anomalous
+            data points by finding records in areas of low density. The
+            probability that a point is an anomaly is then inversly
+            proportional to the density.
+         </p>
 
-         <pre class="code">
-#
-# the python implementation here
-#
-#
-         </pre>
+         <h3>Clustering approaches</h3>
+         <p>
+            Clustering approaches to anomaly detection involve running
+            clustering algorithms on datasets and then finding groups that are
+            small or are far away from other groups. The points in these
+            groups are likely to be anomalies.
+         </p>
       </div>
    </body>
 </html>
