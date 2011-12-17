@@ -23,13 +23,64 @@
 
          <h2>Association Analysis</h2>
          <p class="introduction">
-            Introduction about association analyssis + typical process of building a model (a priorii principle, frequent itemset generation, rule generation).
+            Association analysis is the process of finding interesting
+            relationships between attributes in data. For example, in a
+            market basket dataset, it may be interesting to note if
+            transactions that include milk also include diapers.
          </p>
 
-         <h3>Use Cases</h3>
+         <p>
+            Association analysis has two main phases: frequent itemset
+            generation and rule generation. Frequent itemset generation is the
+            process of finding itemsets of a given size that have a minimum
+            support; support is a count of how many records in a dataset are
+            relevant to a given itemset. For market basket data, an itemset of
+            size 2 for milk and diapers would have a support of 12 if 12
+            transactions included both milk and diapers. A minimum support is
+            used to make sure that frequent itemsets are actually frequent;
+            that is, spurious rules are eliminated.
+         </p>
 
-         <h3>Benefits and Drawbacks</h3>
+         <p>
+            Frequent itemset generation relies upon a principle known as the
+            apriori principle. That is, if an itemset I of size S is not
+            frequent, then no itemsets containing the items of I will be
+            frequent. In addition, if an itemset J of size T is frequent, then
+            all smaller itemsets consisting of a subset of the items in J will
+            also be frequent. This principle is used to produce frequent
+            itemsets efficiently.
+         </p>
 
+         <p>
+            One such efficient algorithm is the F k-1 x F k-1 method. This
+            method merges pairs of k-1 itemsets if the first k-2 sorted items
+            are identical in order to produce a k itemset. The resulting
+            itemsets are then tested for a minimum support. The algorithm
+            starts with 1-itemsets consisting of all of the possible items
+            that meet the minimum support.  The algorithm terminates when no
+            more itemsets can be created; that is, a maximum size has been
+            reached.
+         </p>
+
+         <p>
+            Rule generation is the process of turning frequent itemsets into
+            association rules. Associations rules are implications. A
+            association rule has a confidence, which is a measure of how
+            frequently items in B appear in transactions that contain A for
+            the rule A -> B.  Confidence is use dto remove extraneous rules
+            that do not correctly predict B given A in many cases.
+         </p>
+
+         <p>
+            The apriori principle can also be applied to rule generation in
+            order to produce rules efficiently. The algorithm starts with all
+            items of an itemset on the antecedent side of the rule. Then,
+            single items are moved to the consequent side of the rule and
+            tested for confidence. If the confidence is not high enough, then
+            no rule consisting of additional values on the consequent side
+            will have a greater confidence. Thus, these rules can be skipped
+            without consideration.
+         </p>
       </div>
    </body>
 </html>
